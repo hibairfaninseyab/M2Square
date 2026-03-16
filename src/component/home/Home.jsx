@@ -15,7 +15,7 @@ const titles = [
   "The best mortgage rates",
   "Refinance your Home",
   "Instant Pre-approvals",
-  "Get a UAE Golden Visa"
+  "Get a Saudi Arabia Golden Visa"
 ];
 
 const images = [
