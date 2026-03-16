@@ -2,7 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import bg from "../../assets/buysell/background.svg";
 import d from "../../assets/buysell/d.svg";
 import img1 from "../../assets/buysell/img1.svg";
 import img2 from "../../assets/buysell/img2.svg";
@@ -13,6 +12,8 @@ import FAQ from "../faq/Faq";
 import mob from "../../assets/buysell/mobile.svg";
 import applestore from "../../assets/apple-store.svg";
 import googleplay from "../../assets/google-play.svg";
+import bg from "../../assets/buysell/Background.svg";
+
 
 const services = [
   {
