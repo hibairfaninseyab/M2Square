@@ -7,12 +7,12 @@ import img1 from "../../assets/BuySell/img1.svg";
 import img2 from "../../assets/BuySell/img2.svg";
 import img3 from "../../assets/BuySell/img3.svg";
 import img4 from "../../assets/BuySell/img4.svg";
-import bg2 from "../../assets/BuySell/Background1.png";
+import bg2 from "../../assets/BuySell/bg2.png";
 import FAQ from "../faq/Faq";
 import mob from "../../assets/BuySell/mobile.svg";
 import applestore from "../../assets/apple-store.svg";
 import googleplay from "../../assets/google-play.svg";
-import bg from "../../assets/BuySell/Background.svg";
+import bg from "../../assets/BuySell/bg.svg";
 
 
 const services = [
