@@ -2,17 +2,17 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import d from "../../assets/buysell/d.svg";
-import img1 from "../../assets/buysell/img1.svg";
-import img2 from "../../assets/buysell/img2.svg";
-import img3 from "../../assets/buysell/img3.svg";
-import img4 from "../../assets/buysell/img4.svg";
-import bg2 from "../../assets/buysell/Background1.png";
+import d from "../../assets/BuySell/d.svg";
+import img1 from "../../assets/BuySell/img1.svg";
+import img2 from "../../assets/BuySell/img2.svg";
+import img3 from "../../assets/BuySell/img3.svg";
+import img4 from "../../assets/BuySell/img4.svg";
+import bg2 from "../../assets/BuySell/Background1.png";
 import FAQ from "../faq/Faq";
-import mob from "../../assets/buysell/mobile.svg";
+import mob from "../../assets/BuySell/mobile.svg";
 import applestore from "../../assets/apple-store.svg";
 import googleplay from "../../assets/google-play.svg";
-import bg from "../../assets/buysell/Background.svg";
+import bg from "../../assets/BuySell/Background.svg";
 
 
 const services = [
