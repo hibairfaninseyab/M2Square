@@ -8,27 +8,36 @@ import tokenizationImage from '../../assets/tokenization_glance.png';
 const apartments = [
   {
     id: 1,
-    image: "../src/assets/re_1.png",
-    title: "Downtown Highrise Apartment #1",
-    location: "Dubai Marina, UAE",
-    price: "AED 2,500",
-    roi: "9.5% Est. ROI",
+    image: "../src/assets/re_2.png",
+    title: "Studio Apartment",
+    location: "Business Bay",
+    propertyType: "Apartment",
+    listingPrice: "SAR 1,144,000",
+    currentValuation: "SAR 1,229,896",
+    annualRoi: "10.64%",
+    badges: ["Available", "Ready"]
   },
   {
     id: 2,
-    image: "../src/assets/re_2.png",
-    title: "Downtown Highrise Apartment #2",
-    location: "Dubai Marina, UAE",
-    price: "AED 2,700",
-    roi: "9.7% Est. ROI",
+    image: "../src/assets/re_1.png",
+    title: "3 Bedroom",
+    location: "Jumeirah Village Circle",
+    propertyType: "Townhouse",
+    listingPrice: "SAR 2,300,000",
+    currentValuation: "SAR 2,450,000",
+    annualRoi: "8.90%",
+    badges: ["Unavailable"]
   },
   {
     id: 3,
     image: "../src/assets/re_3.png",
-    title: "Downtown Highrise Apartment #3",
-    location: "Dubai Marina, UAE",
-    price: "AED 2,600",
-    roi: "9.6% Est. ROI",
+    title: "Studio Apartment",
+    location: "Business Bay",
+    propertyType: "Apartment",
+    listingPrice: "SAR 1,144,000",
+    currentValuation: "SAR 1,229,896",
+    annualRoi: "10.64%",
+    badges: ["Available", "Ready"]
   }
 ];
 const TokenizedHomes = () => {
@@ -52,15 +61,7 @@ const TokenizedHomes = () => {
             Buy, Sell, and Trade fractional real estate in premium properties starting from just AED 2,000.
           </p>
 
-          <div style={{ display: "flex", justifyContent: "center", gap: "16px", marginBottom: "60px" }}>
-            <button style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}>
-              {/* Google Play Badges Placeholder */}
-              <div style={{ width: "160px", height: "48px", background: "#111827", borderRadius: "8px", border: "1px solid #374151", display: "flex", alignItems: "center", justifyContent: "center" }}>Google Play</div>
-            </button>
-            <button style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}>
-              <div style={{ width: "160px", height: "48px", background: "#111827", borderRadius: "8px", border: "1px solid #374151", display: "flex", alignItems: "center", justifyContent: "center" }}>App Store</div>
-            </button>
-          </div>
+
 
           <div style={{ width: "100%", height: "300px", background: "url('/placeholder-grid.png') center/cover", opacity: 0.3 }}></div>
         </div>
@@ -74,128 +75,228 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 2. PROPERTIES SELECTION */}
-      <section style={{ padding: "80px 0" }}>
+      <section style={{ padding: "80px 0", background: "#060A11" }}>
         <div className="container" style={{ maxWidth: "1280px" }}>
-          <h2 style={{ fontSize: "32px", fontWeight: "700", textAlign: "center", marginBottom: "40px" }}>The Selection That Speaks For Itself</h2>
+          <h2 style={{ fontSize: "36px", fontWeight: "700", textAlign: "center", marginBottom: "50px", color: "white" }}>The Future Of Real Estate Starts Here</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", marginBottom: "40px" }}>
             {apartments.map((apartment) => (
               <div
                 key={apartment.id}
-                style={{ background: "#111827", borderRadius: "24px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.05)" }}
+                style={{
+                  backgroundImage: `url(${apartment.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: "500px",
+                  borderRadius: "24px",
+                  overflow: "hidden",
+                  position: "relative"
+                }}
               >
-                <div style={{ height: "350px", position: "relative" }}>
-                  <img
-                    src={apartment.image}
-                    alt={apartment.title}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  />
-                  <span
-                    style={{
-                      position: "absolute",
-                      top: "20px",
-                      left: "20px",
-                      background: "#10B981",
-                      color: "white",
-                      padding: "4px 12px",
-                      borderRadius: "20px",
-                      fontSize: "12px"
-                    }}
-                  >
-                    Available
-                  </span>
+                {/* Overlay gradient */}
+                <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to top, rgba(6,10,17,1) 0%, rgba(6,10,17,0.7) 30%, rgba(0,0,0,0) 80%)", zIndex: 1 }}></div>
+
+                {/* Badges */}
+                <div style={{ position: "absolute", top: "20px", left: "20px", right: "20px", display: "flex", justifyContent: "space-between", zIndex: 2 }}>
+                  <div style={{ display: "flex", gap: "8px" }}>
+                    {apartment.badges.map((b, i) => (
+                      <span key={i} style={{ background: b === "Available" ? "#10B981" : b === "Ready" ? "#111827" : "rgba(239, 68, 68, 0.4)", color: "white", padding: "6px 14px", borderRadius: "20px", fontSize: "12px", fontWeight: "600", border: b === "Unavailable" ? "1px solid #EF4444" : "none" }}>{b}</span>
+                    ))}
+                  </div>
+                  {apartment.id === 1 && <span style={{ background: "rgba(0,0,0,0.5)", color: "white", padding: "6px 14px", borderRadius: "20px", fontSize: "12px", border: "1px solid rgba(255,255,255,0.2)" }}>Under Offer</span>}
                 </div>
-                <div style={{ padding: "24px" }}>
-                  <h4 style={{ fontSize: "20px", fontWeight: "600", marginBottom: "8px" }}>
-                    {apartment.title}
-                  </h4>
-                  <p style={{ color: "#9CA3AF", fontSize: "14px", marginBottom: "16px" }}>
-                    {apartment.location}
-                  </p>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "16px", fontWeight: "600" }}>
-                    <span>{apartment.price}</span>
-                    <span style={{ color: "#10B981" }}>{apartment.roi}</span>
+
+                {/* Content Overlay */}
+                <div style={{ position: "absolute", bottom: "30px", left: "24px", right: "24px", zIndex: 2 }}>
+                  <div style={{ display: "flex", gap: "16px", marginBottom: "12px", color: "#9CA3AF", fontSize: "12px", alignItems: "center" }}>
+                    <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                      <i className="fa-solid fa-location-dot"></i> {apartment.location}
+                    </span>
+                    <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                      <i className="fa-solid fa-building"></i> {apartment.propertyType}
+                    </span>
+                  </div>
+
+                  <h4 style={{ fontSize: "24px", fontWeight: "700", marginBottom: "20px", color: "white" }}>{apartment.title}</h4>
+
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "16px" }}>
+                    <div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "#FBBF24", fontSize: "14px", marginBottom: "4px" }}>
+                        <i className="fa-solid fa-money-bill-wave"></i>
+                      </div>
+                      <p style={{ color: "#9CA3AF", fontSize: "11px", marginBottom: "2px" }}>Listing Price</p>
+                      <p style={{ fontSize: "14px", fontWeight: "700", color: "white" }}>{apartment.listingPrice}</p>
+                    </div>
+                    <div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "#FBBF24", fontSize: "14px", marginBottom: "4px" }}>
+                        <i className="fa-solid fa-coins"></i>
+                      </div>
+                      <p style={{ color: "#9CA3AF", fontSize: "11px", marginBottom: "2px" }}>Current Valuation</p>
+                      <p style={{ fontSize: "14px", fontWeight: "700", color: "white" }}>{apartment.currentValuation}</p>
+                    </div>
+                    <div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "#FBBF24", fontSize: "14px", marginBottom: "4px" }}>
+                        <i className="fa-solid fa-chart-line"></i>
+                      </div>
+                      <p style={{ color: "#9CA3AF", fontSize: "11px", marginBottom: "2px" }}>Annual ROI</p>
+                      <p style={{ fontSize: "14px", fontWeight: "700", color: "white" }}>{apartment.annualRoi}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Dots Pagination Placeholder */}
+          <div style={{ display: "flex", justifyContent: "center", gap: "8px", marginBottom: "40px" }}>
+            <div style={{ width: "24px", height: "8px", background: "#8B5CF6", borderRadius: "10px" }}></div>
+            <div style={{ width: "8px", height: "8px", background: "#1F2937", borderRadius: "50%" }}></div>
+            <div style={{ width: "8px", height: "8px", background: "#1F2937", borderRadius: "50%" }}></div>
+          </div>
+
           <div style={{ textAlign: "center" }}>
-            <button style={{ background: "transparent", border: "2px solid #6366F1", padding: "12px 32px", borderRadius: "30px", color: "white", fontWeight: "600", cursor: "pointer" }}>View All Properties</button>
+            <button style={{ background: "#8B5CF6", border: "none", padding: "14px 40px", borderRadius: "30px", color: "white", fontWeight: "600", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "10px" }}>
+              View Funded Properties
+              <div style={{ width: "24px", height: "24px", background: "rgba(255,255,255,0.2)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <i className="fa-solid fa-arrow-right" style={{ transform: "rotate(-45deg)", fontSize: "12px" }}></i>
+              </div>
+            </button>
           </div>
         </div>
       </section>
 
       {/* 3. FOUR FEATURES */}
-      <section style={{ padding: "60px 0", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "40px", maxWidth: "1100px" }}>
+      <section style={{ padding: "100px 0", background: "#060A11" }}>
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "60px 40px", maxWidth: "1100px" }}>
           {[
-            { title: "Earn passive income", desc: "Collect monthly rental yields directly safely strictly." },
-            { title: "Tokens security", desc: "Secured by DFSA compliance smart audit streams." },
-            { title: "Global Visa perks", desc: "Unlock citizenship access paths overlay strictly." },
-            { title: "24/7 liquidity", desc: "Trade assets freely on absolute transparent fully." }
+            {
+              title: "Bridging real estate and the digital age",
+              desc: "M2 Square is revolutionizing real estate investment in the MENA region by seamlessly bridging traditional real estate with the digital age."
+            },
+            {
+              title: "Backed by Dubai’s Leading Authorities",
+              desc: "We’re licensed by the Dubai Virtual Assets Regulatory Authority (VARA) and are strategic partners of the Dubai Land Department (SALD)."
+            },
+            {
+              title: "Own and trade property tokens securely",
+              desc: "Our platform lets you securely and seamlessly own and sell property tokens on our Marketplace, giving you full control and transparency."
+            },
+            {
+              title: "Save on Dubai Land Department (SALD) fees",
+              desc: "With M2 Square, investors pay only half the DLD fees —just 2% instead of the standard 4%—making real estate investments more affordable and accessible."
+            }
           ].map((feature, i) => (
-            <div key={i} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              <div style={{ width: "40px", height: "40px", background: "#4338CA", borderRadius: "8px" }}></div>
-              <h5 style={{ fontSize: "18px", fontWeight: "600" }}>{feature.title}</h5>
-              <p style={{ color: "#9CA3AF", fontSize: "14px", lineHeight: "1.5" }}>{feature.desc}</p>
+            <div key={i} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              {/* 4 diamond icon */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "4px", width: "24px", transform: "rotate(45deg)", marginBottom: "4px" }}>
+                <div style={{ width: "10px", height: "10px", background: "#8B5CF6", borderRadius: "2px" }}></div>
+                <div style={{ width: "10px", height: "10px", background: "#8B5CF6", borderRadius: "2px" }}></div>
+                <div style={{ width: "10px", height: "10px", background: "#8B5CF6", borderRadius: "2px" }}></div>
+                <div style={{ width: "10px", height: "10px", background: "#8B5CF6", borderRadius: "2px" }}></div>
+              </div>
+              <h4 style={{ fontSize: "20px", fontWeight: "700", color: "white", lineHeight: "1.4" }}>{feature.title}</h4>
+              <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "16px", lineHeight: "1.6", fontWeight: "400" }}>{feature.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* 4. TOKENIZATION BANNERS */}
-      <section style={{ padding: "80px 0" }}>
-        <div className="container" style={{ maxWidth: "1200px", display: "flex", flexDirection: "column", gap: "40px" }}>
+      <section style={{ padding: "100px 0", background: "#060A11" }}>
+        <div className="container" style={{ maxWidth: "1200px", display: "flex", flexDirection: "column", gap: "80px" }}>
 
-          <div style={{ background: "#111827", borderRadius: "32px", padding: "60px", display: "grid", gridTemplateColumns: "1.2fr 1fr", alignItems: "center", gap: "40px" }}>
+          {/* First Banner */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", gap: "60px" }}>
             <div>
-              <h2 style={{ fontSize: "36px", fontWeight: "800", marginBottom: "16px" }}>Tokenization explained <br /> simply at glance</h2>
-              <p style={{ color: "#9CA3AF", marginBottom: "30px", lineHeight: "1.6" }}>Blockchain tokenizes safe fractionals framing standard boundaries safely loaded strictly overlay strictly framing loads safe absolute dimensions framing standard framing strictly framing safe loads margins safely layout absolute bounds dimension.</p>
-              <button style={{ background: "#6366F1", border: "none", padding: "12px 24px", borderRadius: "30px", color: "white", cursor: "pointer" }}>Learn More</button>
+              <h2 style={{ fontSize: "42px", fontWeight: "800", marginBottom: "20px", color: "white", fontFamily: "Montserrat" }}>Tokenization <br /> at a glance</h2>
+              <p style={{ color: "rgba(255,255,255,0.6)", marginBottom: "20px", lineHeight: "1.6", fontSize: "16px" }}>
+                Real estate tokenization is the process of transforming real-world assets (properties) into virtual assets (tokens) stored on a blockchain.
+              </p>
+              <p style={{ color: "rgba(255,255,255,0.6)", lineHeight: "1.6", fontSize: "16px" }}>
+                Instead of relying on traditional methods and lengthy transactions, the properties' title deeds are registered on the blockchain, making real estate fractional ownership easier, transparent, and more accessible.
+              </p>
             </div>
-            <div
-              style={{
-                width: "100%",
-                height: "250px",
-                borderRadius: "20px",
-                backgroundImage: `url(${tokenizationImage})`,
-                backgroundSize: "cover",      // makes the image cover the whole div
-                backgroundPosition: "center", // centers the image
-                backgroundRepeat: "no-repeat" // prevents tiling
-              }}
-            ></div>
+
+            <div style={{ width: "100%", height: "480px", background: "#191B4C", borderRadius: "32px", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+              {/* 3D Token illustration mockup */}
+              <div style={{ width: "260px", height: "260px", background: "#4338CA", borderRadius: "50%", position: "relative", border: "12px solid #6366F1", boxShadow: "0 0 50px rgba(99, 102, 241, 0.4)", transform: "rotate(-15deg)" }}>
+                <div style={{ width: "180px", height: "180px", borderRadius: "50%", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", background: "linear-gradient(135deg, #D9F99D, #84CC16)" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px", width: "70px", height: "70px", transform: "translate(55px, 55px) rotate(45deg)" }}>
+                    <div style={{ width: "30px", height: "30px", background: "#4338CA", borderRadius: "4px" }}></div>
+                    <div style={{ width: "30px", height: "30px", background: "#4338CA", borderRadius: "4px" }}></div>
+                    <div style={{ width: "30px", height: "30px", background: "#4338CA", borderRadius: "4px" }}></div>
+                    <div style={{ width: "30px", height: "30px", background: "#4338CA", borderRadius: "4px" }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div style={{ background: "#111827", borderRadius: "32px", padding: "60px", display: "grid", gridTemplateColumns: "1fr 1.2fr", alignItems: "center", gap: "40px" }}>
-            <div
-              style={{
-                width: "100%",
-                height: "250px",
-                borderRadius: "20px",
-                backgroundImage: `url(${tokenizationImage})`,
-                backgroundSize: "cover",      // makes the image cover the whole div
-                backgroundPosition: "center", // centers the image
-                backgroundRepeat: "no-repeat" // prevents tiling
-              }}
-            ></div><div>
-              <h2 style={{ fontSize: "36px", fontWeight: "800", marginBottom: "16px" }}>What is tokenization?</h2>
-              <p style={{ color: "#9CA3AF", marginBottom: "30px", lineHeight: "1.6" }}>Transforming physical properties into safe fractional nodes loading sizing fully loaded layout loads absolute loads margins loaded absolute loads framing dimensional loaded absolute sizing spaced layers spaces layouts absolute framing spacing dimensional.</p>
-              <button style={{ background: "#6366F1", border: "none", padding: "12px 24px", borderRadius: "30px", color: "white", cursor: "pointer" }}>Learn More</button>
+          {/* Second Banner */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", gap: "60px" }}>
+            <div style={{ width: "100%", height: "480px", background: "#191B4C", borderRadius: "32px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+              {/* Grid Mockup */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(8, 25px)", gap: "6px", opacity: 0.6 }}>
+                {Array.from({ length: 48 }).map((_, i) => (
+                  <div key={i} style={{ width: "25px", height: "25px", background: i > 23 && i < 30 ? "#6366F1" : "#1E1B4B", borderRadius: "4px", border: i > 23 && i < 30 ? "1px solid #A5B4FC" : "1px solid rgba(255,255,255,0.05)", boxShadow: i > 23 && i < 30 ? "0 0 10px rgba(99,102,241,0.8)" : "none" }}></div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: "42px", fontWeight: "800", marginBottom: "20px", color: "white", fontFamily: "Montserrat" }}>What is a <span style={{ color: "#8B5CF6" }}>token?</span></h2>
+              <p style={{ color: "rgba(255,255,255,0.6)", marginBottom: "20px", lineHeight: "1.6", fontSize: "16px" }}>
+                A token is a digital unit of ownership stored on a blockchain.
+              </p>
+              <p style={{ color: "rgba(255,255,255,0.6)", marginBottom: "30px", lineHeight: "1.6", fontSize: "16px" }}>
+                For example, in real estate, a property can be divided into 1,000,000 tokens, and each token represents a fraction of ownership. Buying 10,000 tokens would give you 1% ownership of the property.
+              </p>
+
+              <button style={{ background: "#8B5CF6", border: "none", padding: "12px 32px", borderRadius: "30px", color: "white", fontWeight: "600", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                Get Started
+                <div style={{ width: "24px", height: "24px", background: "rgba(255,255,255,0.2)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <i className="fa-solid fa-arrow-right" style={{ transform: "rotate(-45deg)", fontSize: "12px" }}></i>
+                </div>
+              </button>
             </div>
           </div>
+
         </div>
       </section>
 
       {/* 5. STEPS ROW */}
-      <section style={{ padding: "80px 0", textAlign: "center" }}>
+      <section style={{ padding: "100px 0", textAlign: "center", background: "#060A11" }}>
         <div className="container" style={{ maxWidth: "1200px" }}>
-          <h2 style={{ fontSize: "36px", fontWeight: "800", marginBottom: "40px" }}>It is Really This Simple</h2>
+          <h2 style={{ fontSize: "42px", fontWeight: "800", marginBottom: "16px", color: "white" }}>It’s Really This Simple</h2>
+          <p style={{ color: "rgba(255,255,255,0.6)", maxWidth: "600px", margin: "0 auto 60px", fontSize: "16px", lineHeight: "1.6" }}>
+            Start building wealth and earn passive income in 3 easy steps.
+          </p>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
-            {[1, 2, 3].map((step) => (
-              <div key={step} style={{ background: "#111827", borderRadius: "24px", padding: "40px 30px", border: "1px solid rgba(255,255,255,0.05)" }}>
-                <p style={{ color: "#8B5CF6", fontWeight: "600", marginBottom: "12px" }}>STEP 0{step}</p>
-                <h4 style={{ fontSize: "20px", fontWeight: "600", marginBottom: "20px" }}>Create your Account setup terms safely</h4>
-                <div style={{ width: "100%", height: "250px", background: "#374151", borderRadius: "16px" }}></div>
+            {[
+              {
+                title: "Buy",
+                desc: "Browse our expertly curated portfolio and invest in tokenised Saudi Arabia properties from SAR 2,000.",
+                image: "../src/assets/image 3.png"
+              },
+              {
+                title: "Mortgage",
+                desc: "Receive returns from monthly rental income and capital appreciation, directly in your M2 Square Mint Wallet.",
+                image: "../src/assets/image 4.png"
+              },
+              {
+                title: "Mint",
+                desc: "Easily sell your tokens on the M2Square Mint Marketplace, offering faster and flexible transactions.",
+                image: "../src/assets/image 5.png"
+              }
+            ].map((step, index) => (
+              <div key={index} style={{ background: "#111428", borderRadius: "32px", padding: "40px 30px 0", border: "1px solid rgba(255,255,255,0.03)", textAlign: "left", display: "flex", flexDirection: "column", gap: "16px", overflow: "hidden" }}>
+                <h4 style={{ fontSize: "28px", fontWeight: "700", color: "#8B5CF6" }}>{step.title}</h4>
+                <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px", minHeight: "70px" }}>{step.desc}</p>
+
+                {/* iPhone Mockup Image container */}
+                <div style={{ width: "100%", height: "350px", background: "rgba(255,255,255,0.02)", borderTopLeftRadius: "24px", borderTopRightRadius: "24px", overflow: "hidden" }}>
+                  <img src={step.image} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} alt={step.title} />
+                </div>
               </div>
             ))}
           </div>
@@ -203,7 +304,7 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 6. LAPTOP Mockup BANNER */}
-      <section style={{ padding: "80px 0" }}>
+      {/* <section style={{ padding: "80px 0" }}>
         <div className="container">
           <div style={{ background: "#5222E2", borderRadius: "32px", padding: "60px", display: "grid", gridTemplateColumns: "1.2fr 1fr", alignItems: "center" }}>
             <div>
@@ -217,10 +318,10 @@ const TokenizedHomes = () => {
             <div style={{ width: "100%", height: "250px", background: "url('/laptop.png') center/contain no-repeat" }}></div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 7. INVEST TERMS / DASHBOARD */}
-      <section style={{ padding: "80px 0" }}>
+      {/* <section style={{ padding: "80px 0" }}>
         <div className="container" style={{ maxWidth: "1200px", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "60px", alignItems: "center" }}>
           <div>
             <h2 style={{ fontSize: "36px", fontWeight: "800", marginBottom: "30px" }}>Investing On your terms</h2>
@@ -235,17 +336,27 @@ const TokenizedHomes = () => {
           </div>
           <div style={{ width: "100%", height: "400px", background: "#111827", borderRadius: "24px" }}></div>
         </div>
-      </section>
+      </section> */}
 
       {/* 8. WE TAKE CARE */}
-      <section style={{ padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <h2 style={{ fontSize: "32px", fontWeight: "800", marginBottom: "40px" }}>We Take Care of It All</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "40px", textAlign: "left" }}>
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item}>
-                <h5 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>Legal & Compliance framework</h5>
-                <p style={{ color: "#9CA3AF", fontSize: "14px", lineHeight: "1.5" }}>Fully auditable node streams properly compliant layout bounds loads sizes safely framing limit layout spacing spacing dimensions layout sizing fully sizing space layout loaded.</p>
+      <section style={{ padding: "100px 0", background: "#060A11" }}>
+        <div className="container" style={{ maxWidth: "1100px", textAlign: "center" }}>
+          <h2 style={{ fontSize: "42px", fontWeight: "800", marginBottom: "60px", color: "white" }}>We Take Care Of It All</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "50px 60px", textAlign: "left" }}>
+            {[
+              { title: "Property sourcing", desc: "Our expert team identifies and selects high-potential properties for tokenization." },
+              { title: "Property funding", desc: "The property is listed on our platform and opened for investor funding." },
+              { title: "Asset tokenization", desc: "The property is divided into digital tokens, allowing investors to own them directly through our platform." },
+              { title: "Property management", desc: "We take care of everything, from tenant selection to maintenance, and everything in between." },
+              { title: "Dividend distribution", desc: "Investors receive their share of monthly rental income directly in their M2 Square Mint Wallet." },
+              { title: "Exit strategy", desc: "We seamlessly handle the sale when the property reaches its target value or investors vote to sell." }
+            ].map((item, i) => (
+              <div key={i} style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                <div style={{ width: "2px", height: "45px", background: "#8B5CF6", flexShrink: 0 }}></div>
+                <div>
+                  <h5 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "10px", color: "white" }}>{item.title}</h5>
+                  <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", lineHeight: "1.6" }}>{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -253,27 +364,43 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 9. MARKETPLACE CONTROL filter tabs */}
-      <section style={{ padding: "80px 0" }}>
+      <section style={{ padding: "100px 0", background: "#060A11" }}>
         <div className="container" style={{ maxWidth: "1200px", textAlign: "center" }}>
-          <h2 style={{ fontSize: "32px", fontWeight: "800", marginBottom: "20px" }}>Our Marketplace, Your Control</h2>
+          <h2 style={{ fontSize: "42px", fontWeight: "800", marginBottom: "30px", color: "white" }}>Our Marketplace, Your Control</h2>
 
-          <div style={{ display: "inline-flex", background: "#111827", padding: "6px", borderRadius: "30px", marginBottom: "40px" }}>
-            {["Invest", "Sell", "Trade"].map((tab) => (
+          <div style={{ display: "inline-flex", background: "#111428", padding: "4px", borderRadius: "30px", marginBottom: "50px", border: "1px solid rgba(255,255,255,0.05)" }}>
+            {["Sell tokens", "Buy Tokens", "Compliance"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                style={{ padding: "10px 24px", borderRadius: "20px", border: "none", background: activeTab === tab ? "#6366F1" : "transparent", color: "white", cursor: "pointer", fontWeight: "600" }}
+                style={{
+                  padding: "12px 36px",
+                  borderRadius: "24px",
+                  border: "none",
+                  background: (activeTab === tab || tab === "Sell tokens") ? "#8B5CF6" : "transparent",
+                  color: (activeTab === tab || tab === "Sell tokens") ? "white" : "rgba(255,255,255,0.4)",
+                  cursor: "pointer",
+                  fontWeight: "600",
+                  fontSize: "14px",
+                  transition: "all 0.3s"
+                }}
               >
                 {tab}
               </button>
             ))}
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
-            {[1, 2, 3].map((item) => (
-              <div key={item} style={{ background: "#111827", borderRadius: "20px", padding: "30px", textAlign: "left" }}>
-                <h5 style={{ fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>Direct Market orders placement</h5>
-                <p style={{ color: "#9CA3AF", fontSize: "14px" }}>Absolute load spaces fully fully spaces fully absolute fully loads fully absolute load spacing layout fully absolute load spacing layout fully absolute load spacing layout spacing.</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", textAlign: "left" }}>
+            {[
+              { title: "Price compliance", desc: "Tokens are listed within ±15% of the latest DLD valuation, and we ensure they stay within this range." },
+              { title: "Lock-in period", desc: "Tokens can only be listed after a 3-month lock-in period from the property’s original purchase date." },
+              { title: "Listing process", desc: "Once the price and lock-in conditions are met, sellers can list the tokens they wish to sell." },
+              { title: "Token listing", desc: "Sellers have the flexibility to list their tokens at any time and at different prices." },
+              { title: "Market visibility", desc: "The tokens listed for sale are visible only to approved buyers in the Marketplace." }
+            ].map((item, index) => (
+              <div key={index} style={{ background: "#0B0F19", borderRadius: "24px", padding: "40px", display: "flex", flexDirection: "column", gap: "16px", minHeight: "220px", border: "1px solid rgba(255,255,255,0.02)" }}>
+                <h4 style={{ fontSize: "22px", fontWeight: "700", color: "white" }}>{item.title}</h4>
+                <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "16px", lineHeight: "1.6" }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -285,7 +412,7 @@ const TokenizedHomes = () => {
       <Faq />
 
       {/* 10. HANDBOOK BANNER */}
-      <section style={{ padding: "80px 0 120px" }}>
+      {/* <section style={{ padding: "80px 0 120px" }}>
         <div className="container">
           <div style={{ background: "#5222E2", borderRadius: "32px", padding: "60px", display: "grid", gridTemplateColumns: "1fr 1.2fr", alignItems: "center", gap: "40px" }}>
             <div style={{ width: "100%", height: "300px", background: "#1E1B4B", borderRadius: "24px" }}></div>
@@ -296,7 +423,7 @@ const TokenizedHomes = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 import bg from "../../assets/buysell/bg.svg";
 import d from "../../assets/buysell/d.svg";
 import img1 from "../../assets/buysell/img1.svg";
@@ -10,6 +12,7 @@ import img4 from "../../assets/buysell/img4.svg";
 const BuySellPage = () => {
   return (
     <>
+      <Header />
       {/* HERO SECTION */}
       <div
         className="position-relative d-flex align-items-center text-white"
@@ -284,6 +287,7 @@ const BuySellPage = () => {
         </div>
       </div>
     </div>
+      <Footer />
     </>
   );
 };

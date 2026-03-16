@@ -28,16 +28,16 @@ const Header = () => {
     {
       title: "Home Financing",
       subtitle: "M2 Square Mortgage",
-      bgClass: "bg-img",
+      bgClass: "",
       arrowBg: "#28C76F",
-      link: "#"
+      link: "/finance"
     },
     {
       title: "Fractional Ownership",
       subtitle: "M2 Square Blocks",
       bgClass: "",
       arrowBg: "#00CFE8",
-      link: "#"
+      link: "/home"
     },
     {
       title: "Tokenized Investments",
@@ -51,7 +51,7 @@ const Header = () => {
       subtitle: "M2 Square",
       bgClass: "",
       arrowBg: "#10162A",
-      link: "#"
+      link: "/buy-sell"
     }
   ];
 

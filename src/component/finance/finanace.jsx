@@ -1,5 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 import finance from "../../assets/finance.svg";
 import user1 from "../../assets/finance/user1.svg";
 import user2 from "../../assets/finance/user2.svg";
@@ -67,7 +69,9 @@ const logos = [
  logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12
 ];
   return (
-    <div className="bg-light" style={{ minHeight: "100vh" }}>
+    <>
+      <Header />
+      <div className="bg-light" style={{ minHeight: "100vh" }}>
     
       {/* Hero Section */}
       <section className="container my-5 position-relative">
@@ -585,6 +589,8 @@ Get pre-approved in minutes with the best rates in the market.
               </div>
             </section>
     </div>
+    <Footer />
+    </>
   );
 };
 
