@@ -174,7 +174,29 @@ const BuySellPage = () => {
         >
           {/* LEFT CONTENT */}
           <div className="col-lg-5 text-start">
+      <div className="container my-5">
+        <div
+          className="row align-items-center p-4 p-lg-5"
+          style={{
+            background: "white",
+            borderRadius: "50px",
+          }}
+        >
+          {/* LEFT CONTENT */}
+          <div className="col-lg-5 text-start">
 
+            {/* Menu List */}
+            <div className="mb-4">
+              <h2
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "700",
+                  fontSize: "44px",
+                  color: "#111827",
+                }}
+              >
+                Buy
+              </h2>
             {/* Menu List */}
             <div className="mb-4">
               <h2
@@ -198,7 +220,27 @@ const BuySellPage = () => {
               >
                 Sell
               </h2>
+              <h2
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "700",
+                  fontSize: "44px",
+                  color: "#9CA3AF",
+                }}
+              >
+                Sell
+              </h2>
 
+              <h2
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "700",
+                  fontSize: "44px",
+                  color: "#9CA3AF",
+                }}
+              >
+                Rent
+              </h2>
               <h2
                 style={{
                   fontFamily: "Montserrat",
@@ -221,7 +263,31 @@ const BuySellPage = () => {
                 Manage
               </h2>
             </div>
+              <h2
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "700",
+                  fontSize: "44px",
+                  color: "#9CA3AF",
+                }}
+              >
+                Manage
+              </h2>
+            </div>
 
+            {/* Tags */}
+            <div className="d-flex flex-wrap gap-2 mb-4">
+              <span
+                className="px-3 py-2 text-white"
+                style={{
+                  background: "#D6A84C",
+                  borderRadius: "1000px",
+                  fontFamily: "Montserrat",
+                  fontSize: "16px",
+                }}
+              >
+                Viewings & negotiations
+              </span>
             {/* Tags */}
             <div className="d-flex flex-wrap gap-2 mb-4">
               <span
@@ -248,7 +314,30 @@ const BuySellPage = () => {
                 Offer to handover support
               </span>
             </div>
+              <span
+                className="px-3 py-2 text-white"
+                style={{
+                  background: "#D6A84C",
+                  borderRadius: "1000px",
+                  fontFamily: "Montserrat",
+                  fontSize: "16px",
+                }}
+              >
+                Offer to handover support
+              </span>
+            </div>
 
+            {/* Description */}
+            <p
+              style={{
+                fontFamily: "Montserrat",
+                fontSize: "22px",
+                color: "#111827",
+              }}
+            >
+              For buyers and investors. Find the right property and move forward
+              with confidence.
+            </p>
             {/* Description */}
             <p
               style={{
@@ -263,7 +352,22 @@ const BuySellPage = () => {
 
             {/* Buttons */}
             <div className="d-flex align-items-center gap-4 mt-4">
+            {/* Buttons */}
+            <div className="d-flex align-items-center gap-4 mt-4">
 
+              {/* Find Property Button */}
+              <button
+                className="btn d-flex align-items-center"
+                style={{
+                  background: "#111827",
+                  borderRadius: "32px",
+                  padding: "6px 6px 6px 30px",
+                  color: "white",
+                  fontFamily: "Montserrat",
+                  fontWeight: "600",
+                }}
+              >
+                Find Property
               {/* Find Property Button */}
               <button
                 className="btn d-flex align-items-center"
@@ -291,6 +395,19 @@ const BuySellPage = () => {
                   →
                 </span>
               </button>
+                <span
+                  className="ms-3 d-flex align-items-center justify-content-center"
+                  style={{
+                    width: "50px",
+                    height: "50px",
+                    background: "#23304D",
+                    borderRadius: "50%",
+                    fontSize: "20px",
+                  }}
+                >
+                  →
+                </span>
+              </button>
 
               {/* Learn More */}
               <div
@@ -305,7 +422,22 @@ const BuySellPage = () => {
               >
                 Learn More
               </div>
+              {/* Learn More */}
+              <div
+                className="d-flex align-items-center"
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  color: "#111827",
+                  cursor: "pointer",
+                }}
+              >
+                Learn More
+              </div>
 
+            </div>
+          </div>
             </div>
           </div>
 
