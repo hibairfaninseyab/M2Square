@@ -26,10 +26,16 @@ import client2 from "../../assets/clients/img2.svg";
 import client3 from "../../assets/clients/img3.svg";
 import client4 from "../../assets/clients/img4.svg";
 import readyToInvest from "../../assets/ready-to-invest.svg";
+import download from "../../assets/download.svg";
+import p1 from "../../assets/properties/p1.svg";
+import p2 from "../../assets/properties/p2.svg";
+import p3 from "../../assets/properties/p3.svg";
+import p4 from "../../assets/properties/p4.svg";
 import "./OfferBar.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Testimonials from "../testimonials/Testimonials";
+import FAQ from "../faq/Faq";
 
 const offers = [
   {
@@ -151,7 +157,7 @@ const logos = [
 
    const properties = [
     {
-      img: "https://placehold.co/516x560",
+      img: p1,
       status1: "Rented",
       status2: "Sold Out",
       location1: "Downtown",
@@ -162,7 +168,7 @@ const logos = [
       roi: "8.75%",
     },
     {
-      img: "https://placehold.co/516x560",
+      img: p2,
       status1: "Ready",
       status2: "Available",
       location1: "Jumeirah Village Circle",
@@ -173,7 +179,18 @@ const logos = [
       roi: "10.64%",
     },
     {
-      img: "https://placehold.co/516x560",
+      img: p3,
+      status1: "Ready",
+      status2: "Available",
+      location1: "Business Bay",
+      type1: "Apartment",
+      title: "Studio Apartment",
+      price: "AED 950,000",
+      valuation: "AED 1,020,000",
+      roi: "9.5%",
+    },
+       {
+      img: p4,
       status1: "Ready",
       status2: "Available",
       location1: "Business Bay",
@@ -627,114 +644,67 @@ const Hero = () => {
         </p>
       </div>
 
-      {/* Properties Carousel */}
-      <div
-        id="propertiesCarousel"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner">
-          {properties.map((property, index) => (
-            <div
-              key={index}
-              className={`carousel-item ${index === 0 ? "active" : ""}`}
-            >
-              <div className="d-flex justify-content-center flex-wrap gap-4 px-3">
-                <div className="card shadow" style={{ borderRadius: "25px" }}>
-                  <img
-                    src={property.img}
-                    className="card-img-top"
-                    alt={property.title}
-                    style={{ borderRadius: "25px 25px 0 0" }}
-                  />
-                  <div className="card-body">
-                    {/* Status Pills */}
-                    <div className="d-flex gap-2 mb-2 flex-wrap">
-                      <span className="badge bg-dark">{property.status1}</span>
-                      <span className="badge bg-warning text-dark">
-                        {property.status2}
-                      </span>
-                    </div>
+<div className="container my-4">
+  <div className="row g-3">
+    {properties.map((property, index) => (
+      <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div className="card shadow-sm h-100" style={{ borderRadius: "15px" }}>
+          <img
+            src={property.img}
+            className="card-img-top"
+            alt={property.title}
+            style={{ borderRadius: "15px 15px 0 0", height: "150px", objectFit: "cover" }}
+          />
+          <div className="card-body p-3">
+            {/* Status Pills */}
+            <div className="d-flex gap-2 mb-2 flex-wrap">
+              <span className="badge bg-dark">{property.status1}</span>
+              <span className="badge bg-warning text-dark">{property.status2}</span>
+            </div>
 
-                    {/* Location & Type */}
-                    <div className="d-flex gap-3 mb-2 flex-wrap align-items-center">
-                      <div className="d-flex align-items-center gap-1">
-                        <div className="bg-white rounded-circle" style={{width:18,height:18}} />
-                        <span className="text-muted">{property.location1}</span>
-                      </div>
-                      <div className="d-flex align-items-center gap-1">
-                        <div className="bg-white rounded-circle" style={{width:18,height:18}} />
-                        <span className="text-muted">{property.type1}</span>
-                      </div>
-                    </div>
-
-                    {/* Title */}
-                    <h5 className="fw-semibold">{property.title}</h5>
-
-                    {/* Price / Valuation / ROI */}
-                    <div className="d-flex gap-4 mt-3 flex-wrap">
-                      <div>
-                        <small className="text-muted d-block">Listing Price</small>
-                        <strong>{property.price}</strong>
-                      </div>
-                      <div>
-                        <small className="text-muted d-block">Current Valuation</small>
-                        <strong>{property.valuation}</strong>
-                      </div>
-                      <div>
-                        <small className="text-muted d-block">Annual ROI</small>
-                        <strong>{property.roi}</strong>
-                      </div>
-                    </div>
-
-                    {/* CTA */}
-                    <div className="mt-3">
-                      <button className="btn btn-outline-warning w-100">
-                        Log in to view details
-                      </button>
-                    </div>
-                  </div>
-                </div>
+            {/* Location & Type */}
+            <div className="d-flex gap-2 mb-2 flex-wrap align-items-center">
+              <div className="d-flex align-items-center gap-1">
+                <div className="bg-white rounded-circle" style={{ width: 12, height: 12 }} />
+                <span className="text-muted small">{property.location1}</span>
+              </div>
+              <div className="d-flex align-items-center gap-1">
+                <div className="bg-white rounded-circle" style={{ width: 12, height: 12 }} />
+                <span className="text-muted small">{property.type1}</span>
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Carousel Controls */}
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#propertiesCarousel"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#propertiesCarousel"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+            {/* Title */}
+            <h6 className="fw-semibold">{property.title}</h6>
 
-        {/* Dots */}
-        <div className="carousel-indicators mt-3">
-          {properties.map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              data-bs-target="#propertiesCarousel"
-              data-bs-slide-to={index}
-              className={index === 0 ? "active" : ""}
-              aria-current={index === 0 ? "true" : undefined}
-              aria-label={`Slide ${index + 1}`}
-            ></button>
-          ))}
+            {/* Price / Valuation / ROI */}
+            <div className="d-flex gap-2 mt-2 flex-wrap small">
+              <div>
+                <small className="text-muted d-block">Listing Price</small>
+                <strong>{property.price}</strong>
+              </div>
+              <div>
+                <small className="text-muted d-block">Current Valuation</small>
+                <strong>{property.valuation}</strong>
+              </div>
+              <div>
+                <small className="text-muted d-block">Annual ROI</small>
+                <strong>{property.roi}</strong>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-3">
+              <button className="btn btn-outline-warning w-100 btn-sm">
+                Log in to view details
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+    ))}
+  </div>
+</div>
     </section>
     <section className="bg-light py-5">
       <div className="container text-center mb-4 rounded-4" style={{ background: 'linear-gradient(134deg, #0F7B6C 0%, #13FBDD 100%)' }}>
@@ -755,6 +725,25 @@ const Hero = () => {
       </div>
     </section>
     <Testimonials />
+    <FAQ/>
+   <section className="bg-light py-5">
+      <div className="container text-center mb-4 rounded-4">
+        <div className="row">
+          <div className="col d-flex flex-column justify-content-center align-items-start gap-3 p-5">
+           <h1 className="fw-bold text-black text-uppercase text-start" style={{ fontSize: "3rem" }}>
+Download our <span className="text-success">handbook</span>.        </h1>
+<p style={{width: 360, color: 'var(--Light-Text, #9CA3AF)', fontSize: 20, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word'}}>Your ultimate guide to investing in Dubai’s real estate through fractional ownership.</p>
+        <button className="btn btn-success btn-lg mt-4">
+         Download
+        </button>
+          </div>
+          <div className="col">
+            <img src={download} alt="Download handbook" className="img-fluid" />
+          </div>
+        </div>
+       
+      </div>
+    </section>
       </>
       );
 };
