@@ -5,6 +5,8 @@ import Header from './component/header/Header'
 import Hero from './component/home/Hero'
 import Home from './component/home/Home'
 import TokenizedHomes from './component/tokenized_homes/TokenizedHomes'
+import FinancePage from './component/finance/finanace'
+import BuySellPage from './component/buysell/BuySell'
 
 function App() {
   return (
