@@ -1,18 +1,20 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Footer from './component/Footer/Footer'
-import Header from './component/header/header'
+import Footer from './component/footer/Footer'
+import Header from './component/header/Header'
 import Hero from './component/home/Hero'
+import Home from './component/home/Home'
+import TokenizedHomes from './component/tokenized_homes/TokenizedHomes'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <Header />
-    <Hero />
-     <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<><Header /><Hero /><Footer /></>} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/tokenized-homes" element={<TokenizedHomes />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
