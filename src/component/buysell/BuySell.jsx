@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import d from "../../assets/BuySell/d.svg";
+import d from "../../assets/BuySell/displayimg.svg";
 import img1 from "../../assets/BuySell/img1.svg";
 import img2 from "../../assets/BuySell/img2.svg";
 import img3 from "../../assets/BuySell/img3.svg";
