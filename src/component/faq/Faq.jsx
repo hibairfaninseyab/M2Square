@@ -11,19 +11,19 @@ const FAQ = () => {
     },
     {
       question: "How does it work?",
-      answer: "You can invest in fractional shares of properties via our platform. Returns are distributed based on ownership percentage.",
+      answer: "Investors purchase a share of a property through M2 Square. The platform handles property acquisition, tenant management, maintenance, and rental collection. Profits from rental income are then distributed to investors proportionally.",
     },
     {
       question: "What is the minimum investment amount?",
-      answer: "The minimum investment amount is $1,000, making it accessible for most investors.",
+      answer: "The minimum investment amount starts at [insert specific amount], making it accessible for both small and large investors.",
     },
     {
       question: "How do I receive my rental income?",
-      answer: "Rental income is distributed quarterly directly to your bank account or digital wallet.",
+      answer: "Rental income is distributed periodically (monthly/quarterly) directly to your registered bank account or digital wallet, depending on your preference.",
     },
     {
       question: "Is my investment secure?",
-      answer: "Investments are legally backed by property assets and regulated by financial authorities.",
+      answer: "Your investment is backed by tangible real estate assets. M2 Square also ensures due diligence, legal documentation, and property insurance to enhance security.",
     },
     {
       question: "What documents are required?",
