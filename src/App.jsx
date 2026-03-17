@@ -7,6 +7,9 @@ import Home from './component/landing/Home'
 import TokenizedHomes from './component/tokenized_homes/TokenizedHomes'
 import FinancePage from './component/finance/finanace'
 import BuySellPage from './component/buysell/BuySell'
+import TermsConditions from './component/conditions/terms&conditions'
+import PrivacyPolicy from './component/privacy/privacy'
+import ContactUs from './component/contactus/contact'
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         <Route path="/tokenized-homes" element={<TokenizedHomes />} />
         <Route path="/finance" element={<FinancePage />} />
         <Route path="/buy-sell" element={<BuySellPage />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
   )

@@ -225,7 +225,7 @@ const Hero = () => {
             ))}
           </div>
         </div>
-        <section className="hero">
+        <section className="hero-section">
 
 
 

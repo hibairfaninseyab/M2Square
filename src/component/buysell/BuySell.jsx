@@ -13,7 +13,9 @@ import mob from "../../assets/BuySell/mobile.svg";
 import applestore from "../../assets/apple-store.svg";
 import googleplay from "../../assets/google-play.svg";
 import bg from "../../assets/BuySell/bg.svg";
-
+import value from "../../assets/BuySell/value.svg";
+import invest from "../../assets/BuySell/invest.svg";
+import earn from "../../assets/BuySell/earn.svg";
 
 const services = [
   {
@@ -45,6 +47,47 @@ const services = [
     desc: "We support all transactions throughout the process, from the initial agreement to the final transfer.",
   },
 ];
+
+  const stats = [
+    { number: "1000+", label: "Properties Managed" },
+    { number: "500+", label: "Properties Sold" },
+    { number: "80+", label: "Real Estate Experts" },
+    { number: "8.5K+", label: "Trusted Partners" },
+  ];
+
+  const cards = [
+    {
+      title: "Value Investment",
+      text: "We analyze the Saudi Arabia real estate market to identify properties with strong long-term fundamentals, including location, yield potential, and growth trajectory. By focusing on value at entry, investors can build portfolios that balance steady income with future appreciation.",
+      button: "Free Consultation",
+      img: value,
+    },
+    {
+      title: "Invest From Anywhere",
+      text: (
+        <>
+          Whether you’re in Saudi Arabia, New York, London, or Singapore, you can
+          become a property investor in minutes. M<sup>2</sup> makes it possible
+          to browse, invest, and manage your portfolio entirely online — no
+          travel, no paperwork, and no hassle.
+        </>
+      ),
+      button: "Speak to an advisor",
+      img: invest,
+    },
+    {
+      title: "Earn Rental Income",
+      text: (
+        <>
+          Join thousands of investors who’ve already earned over SAR 600,000 in
+          rental payouts through M<sup>2</sup>. Every property generates steady
+          monthly income while your investment appreciates over time.
+        </>
+      ),
+      img: earn,
+    },
+  ];
+
 
 const BuySellPage = () => {
   return (
@@ -164,769 +207,570 @@ const BuySellPage = () => {
         </div>
       </div>
 
-      <div className="container my-5">
-        <div
-          className="row align-items-center p-4 p-lg-5"
-          style={{
-            background: "white",
-            borderRadius: "50px",
-          }}
-        >
-          {/* LEFT CONTENT */}
-          <div className="col-lg-5 text-start">
-      <div className="container my-5">
-        <div
-          className="row align-items-center p-4 p-lg-5"
-          style={{
-            background: "white",
-            borderRadius: "50px",
-          }}
-        >
-          {/* LEFT CONTENT */}
-          <div className="col-lg-5 text-start">
+     <div className="container my-5">
+  <div
+    className="row align-items-center p-4 p-lg-5 mb-4"
+    style={{
+      background: "white",
+      borderRadius: "50px",
+    }}
+  >
+    {/* LEFT CONTENT */}
+    <div className="col-lg-5 text-start">
 
-            {/* Menu List */}
-            <div className="mb-4">
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#111827",
-                }}
-              >
-                Buy
-              </h2>
-            {/* Menu List */}
-            <div className="mb-4">
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#111827",
-                }}
-              >
-                Buy
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Sell
-              </h2>
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Sell
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Rent
-              </h2>
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Rent
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Manage
-              </h2>
-            </div>
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Manage
-              </h2>
-            </div>
-
-            {/* Tags */}
-            <div className="d-flex flex-wrap gap-2 mb-4">
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Viewings & negotiations
-              </span>
-            {/* Tags */}
-            <div className="d-flex flex-wrap gap-2 mb-4">
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Viewings & negotiations
-              </span>
-
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Offer to handover support
-              </span>
-            </div>
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Offer to handover support
-              </span>
-            </div>
-
-            {/* Description */}
-            <p
-              style={{
-                fontFamily: "Montserrat",
-                fontSize: "22px",
-                color: "#111827",
-              }}
-            >
-              For buyers and investors. Find the right property and move forward
-              with confidence.
-            </p>
-            {/* Description */}
-            <p
-              style={{
-                fontFamily: "Montserrat",
-                fontSize: "22px",
-                color: "#111827",
-              }}
-            >
-              For buyers and investors. Find the right property and move forward
-              with confidence.
-            </p>
-
-            {/* Buttons */}
-            <div className="d-flex align-items-center gap-4 mt-4">
-            {/* Buttons */}
-            <div className="d-flex align-items-center gap-4 mt-4">
-
-              {/* Find Property Button */}
-              <button
-                className="btn d-flex align-items-center"
-                style={{
-                  background: "#111827",
-                  borderRadius: "32px",
-                  padding: "6px 6px 6px 30px",
-                  color: "white",
-                  fontFamily: "Montserrat",
-                  fontWeight: "600",
-                }}
-              >
-                Find Property
-              {/* Find Property Button */}
-              <button
-                className="btn d-flex align-items-center"
-                style={{
-                  background: "#111827",
-                  borderRadius: "32px",
-                  padding: "6px 6px 6px 30px",
-                  color: "white",
-                  fontFamily: "Montserrat",
-                  fontWeight: "600",
-                }}
-              >
-                Find Property
-
-                <span
-                  className="ms-3 d-flex align-items-center justify-content-center"
-                  style={{
-                    width: "50px",
-                    height: "50px",
-                    background: "#23304D",
-                    borderRadius: "50%",
-                    fontSize: "20px",
-                  }}
-                >
-                  →
-                </span>
-              </button>
-                <span
-                  className="ms-3 d-flex align-items-center justify-content-center"
-                  style={{
-                    width: "50px",
-                    height: "50px",
-                    background: "#23304D",
-                    borderRadius: "50%",
-                    fontSize: "20px",
-                  }}
-                >
-                  →
-                </span>
-              </button>
-
-              {/* Learn More */}
-              <div
-                className="d-flex align-items-center"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  color: "#111827",
-                  cursor: "pointer",
-                }}
-              >
-                Learn More
-              </div>
-              {/* Learn More */}
-              <div
-                className="d-flex align-items-center"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  color: "#111827",
-                  cursor: "pointer",
-                }}
-              >
-                Learn More
-              </div>
-
-            </div>
-          </div>
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="col-lg-7 text-center mt-5 mt-lg-0">
-            <img
-              src={img1}
-              alt="property"
-              className="img-fluid"
-              style={{
-                borderRadius: "50px",
-                maxHeight: "720px",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
-         <div
-          className="row align-items-center p-4 p-lg-5"
-          style={{
-            background: "white",
-            borderRadius: "50px",
-          }}
-        >
-          {/* LEFT CONTENT */}
-          <div className="col-lg-5 text-start">
-
-            {/* Menu List */}
-            <div className="mb-4">
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#111827",
-                }}
-              >
-                Buy
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Sell
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Rent
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Manage
-              </h2>
-            </div>
-
-            {/* Tags */}
-            <div className="d-flex flex-wrap gap-2 mb-4">
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Pricing Guidance
-              </span>
-
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Listing to transfer support
-              </span>
-            </div>
-
-            {/* Description */}
-            <p
-              style={{
-                fontFamily: "Montserrat",
-                fontSize: "22px",
-                color: "#111827",
-              }}
-            >
-             For property owners. Sell your property with clarity and control.
-            </p>
-
-            {/* Buttons */}
-            <div className="d-flex align-items-center gap-4 mt-4">
-
-              {/* Find Property Button */}
-              <button
-                className="btn d-flex align-items-center"
-                style={{
-                  background: "#111827",
-                  borderRadius: "32px",
-                  padding: "6px 6px 6px 30px",
-                  color: "white",
-                  fontFamily: "Montserrat",
-                  fontWeight: "600",
-                }}
-              >
-                Sell Property
-
-                <span
-                  className="ms-3 d-flex align-items-center justify-content-center"
-                  style={{
-                    width: "50px",
-                    height: "50px",
-                    background: "#23304D",
-                    borderRadius: "50%",
-                    fontSize: "20px",
-                  }}
-                >
-                  →
-                </span>
-              </button>
-
-              {/* Learn More */}
-              <div
-                className="d-flex align-items-center"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  color: "#111827",
-                  cursor: "pointer",
-                }}
-              >
-                Learn More
-              </div>
-
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="col-lg-7 text-center mt-5 mt-lg-0">
-            <img
-              src={img2}
-              alt="property"
-              className="img-fluid"
-              style={{
-                borderRadius: "50px",
-                maxHeight: "720px",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
-         <div
-          className="row align-items-center p-4 p-lg-5"
-          style={{
-            background: "white",
-            borderRadius: "50px",
-          }}
-        >
-          {/* LEFT CONTENT */}
-          <div className="col-lg-5 text-start">
-
-            {/* Menu List */}
-            <div className="mb-4">
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#111827",
-                }}
-              >
-                Buy
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Sell
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Rent
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Manage
-              </h2>
-            </div>
-
-            {/* Tags */}
-            <div className="d-flex flex-wrap gap-2 mb-4">
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Matching & viewings
-              </span>
-
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-              Contracts & renewals
-              </span>
-            </div>
-
-            {/* Description */}
-            <p
-              style={{
-                fontFamily: "Montserrat",
-                fontSize: "22px",
-                color: "#111827",
-              }}
-            >
-For buyers and investors. Find the right property and move forward with confidence.            </p>
-
-            {/* Buttons */}
-            <div className="d-flex align-items-center gap-4 mt-4">
-
-              {/* Find Property Button */}
-              <button
-                className="btn d-flex align-items-center"
-                style={{
-                  background: "#111827",
-                  borderRadius: "32px",
-                  padding: "6px 6px 6px 30px",
-                  color: "white",
-                  fontFamily: "Montserrat",
-                  fontWeight: "600",
-                }}
-              >
-                Explore
-
-                <span
-                  className="ms-3 d-flex align-items-center justify-content-center"
-                  style={{
-                    width: "50px",
-                    height: "50px",
-                    background: "#23304D",
-                    borderRadius: "50%",
-                    fontSize: "20px",
-                  }}
-                >
-                  →
-                </span>
-              </button>
-
-              {/* Learn More */}
-              <div
-                className="d-flex align-items-center"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  color: "#111827",
-                  cursor: "pointer",
-                }}
-              >
-                Learn More
-              </div>
-
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="col-lg-7 text-center mt-5 mt-lg-0">
-            <img
-              src={img3}
-              alt="property"
-              className="img-fluid"
-              style={{
-                borderRadius: "50px",
-                maxHeight: "720px",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
-         <div
-          className="row align-items-center p-4 p-lg-5"
-          style={{
-            background: "white",
-            borderRadius: "50px",
-          }}
-        >
-          {/* LEFT CONTENT */}
-          <div className="col-lg-5 text-start">
-
-            {/* Menu List */}
-            <div className="mb-4">
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#111827",
-                }}
-              >
-                Buy
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Sell
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Rent
-              </h2>
-
-              <h2
-                style={{
-                  fontFamily: "Montserrat",
-                  fontWeight: "700",
-                  fontSize: "44px",
-                  color: "#9CA3AF",
-                }}
-              >
-                Manage
-              </h2>
-            </div>
-
-            {/* Tags */}
-            <div className="d-flex flex-wrap gap-2 mb-4">
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Tenant Management
-              </span>
-
-              <span
-                className="px-3 py-2 text-white"
-                style={{
-                  background: "#D6A84C",
-                  borderRadius: "1000px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                }}
-              >
-                Owner support.
-              </span>
-            </div>
-
-            {/* Description */}
-            <p
-              style={{
-                fontFamily: "Montserrat",
-                fontSize: "22px",
-                color: "#111827",
-              }}
-            >
-             For property owners. Property management, handled end-to-end.
-            </p>
-
-            {/* Buttons */}
-            <div className="d-flex align-items-center gap-4 mt-4">
-
-              {/* Find Property Button */}
-              <button
-                className="btn d-flex align-items-center"
-                style={{
-                  background: "#111827",
-                  borderRadius: "32px",
-                  padding: "6px 6px 6px 30px",
-                  color: "white",
-                  fontFamily: "Montserrat",
-                  fontWeight: "600",
-                }}
-              >
-                Manage Property
-
-                <span
-                  className="ms-3 d-flex align-items-center justify-content-center"
-                  style={{
-                    width: "50px",
-                    height: "50px",
-                    background: "#23304D",
-                    borderRadius: "50%",
-                    fontSize: "20px",
-                  }}
-                >
-                  →
-                </span>
-              </button>
-
-              {/* Learn More */}
-              <div
-                className="d-flex align-items-center"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  color: "#111827",
-                  cursor: "pointer",
-                }}
-              >
-                Learn More
-              </div>
-
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="col-lg-7 text-center mt-5 mt-lg-0">
-            <img
-              src={img4}
-              alt="property"
-              className="img-fluid"
-              style={{
-                borderRadius: "50px",
-                maxHeight: "720px",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
+      {/* Menu List */}
+      <div className="mb-4">
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Buy</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Sell</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Rent</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Manage</h2>
       </div>
-       <section
+
+      {/* Tags */}
+      <div className="d-flex flex-wrap gap-2 mb-4">
+        <span
+          className="px-3 py-2 text-white"
+          style={{
+            background: "#D6A84C",
+            borderRadius: "1000px",
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+          }}
+        >
+          Viewings & negotiations
+        </span>
+
+        <span
+          className="px-3 py-2 text-white"
+          style={{
+            background: "#D6A84C",
+            borderRadius: "1000px",
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+          }}
+        >
+          Offer to handover support
+        </span>
+      </div>
+
+      {/* Description */}
+      <p
+        style={{
+          fontFamily: "Montserrat",
+          fontSize: "22px",
+          color: "#111827",
+        }}
+      >
+        For buyers and investors. Find the right property and move forward
+        with confidence.
+      </p>
+
+      {/* Buttons */}
+      <div className="d-flex align-items-center gap-4 mt-4">
+
+        <button
+          className="btn d-flex align-items-center"
+          style={{
+            background: "#111827",
+            borderRadius: "32px",
+            padding: "6px 6px 6px 30px",
+            color: "white",
+            fontFamily: "Montserrat",
+            fontWeight: "600",
+          }}
+        >
+          Find Property
+
+          <span
+            className="ms-3 d-flex align-items-center justify-content-center"
+            style={{
+              width: "50px",
+              height: "50px",
+              background: "#23304D",
+              borderRadius: "50%",
+              fontSize: "20px",
+            }}
+          >
+            →
+          </span>
+        </button>
+
+        <div
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "18px",
+            fontWeight: "500",
+            color: "#111827",
+            cursor: "pointer",
+          }}
+        >
+          Learn More
+        </div>
+
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="col-lg-7 text-center mt-5 mt-lg-0">
+      <img
+        src={img1}
+        alt="property"
+        className="img-fluid"
+        style={{
+          borderRadius: "50px",
+          maxHeight: "720px",
+          objectFit: "cover",
+        }}
+      />
+    </div>
+  </div>
+  <div
+    className="row align-items-center p-4 p-lg-5 mb-4"
+    style={{
+      background: "white",
+      borderRadius: "50px",
+    }}
+  >
+    {/* LEFT CONTENT */}
+    <div className="col-lg-5 text-start">
+
+      {/* Menu List */}
+      <div className="mb-4">
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Buy</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Sell</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Rent</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Manage</h2>
+      </div>
+
+      {/* Tags */}
+      <div className="d-flex flex-wrap gap-2 mb-4">
+        <span
+          className="px-3 py-2 text-white"
+          style={{
+            background: "#D6A84C",
+            borderRadius: "1000px",
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+          }}
+        >
+         Pricing Guidance
+        </span>
+
+        <span
+          className="px-3 py-2 text-white"
+          style={{
+            background: "#D6A84C",
+            borderRadius: "1000px",
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+          }}
+        >
+         Listing to transfer support
+        </span>
+      </div>
+
+      {/* Description */}
+      <p
+        style={{
+          fontFamily: "Montserrat",
+          fontSize: "22px",
+          color: "#111827",
+        }}
+      >
+       For property owners. Sell your property with clarity and control.
+      </p>
+
+      {/* Buttons */}
+      <div className="d-flex align-items-center gap-4 mt-4">
+
+        <button
+          className="btn d-flex align-items-center"
+          style={{
+            background: "#111827",
+            borderRadius: "32px",
+            padding: "6px 6px 6px 30px",
+            color: "white",
+            fontFamily: "Montserrat",
+            fontWeight: "600",
+          }}
+        >
+         Sell Property
+
+          <span
+            className="ms-3 d-flex align-items-center justify-content-center"
+            style={{
+              width: "50px",
+              height: "50px",
+              background: "#23304D",
+              borderRadius: "50%",
+              fontSize: "20px",
+            }}
+          >
+            →
+          </span>
+        </button>
+
+        <div
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "18px",
+            fontWeight: "500",
+            color: "#111827",
+            cursor: "pointer",
+          }}
+        >
+          Learn More
+        </div>
+
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="col-lg-7 text-center mt-5 mt-lg-0">
+      <img
+        src={img2}
+        alt="property"
+        className="img-fluid"
+        style={{
+          borderRadius: "50px",
+          maxHeight: "720px",
+          objectFit: "cover",
+        }}
+      />
+    </div>
+  </div>
+   <div
+    className="row align-items-center p-4 p-lg-5 mb-4"
+    style={{
+      background: "white",
+      borderRadius: "50px",
+    }}
+  >
+    {/* LEFT CONTENT */}
+    <div className="col-lg-5 text-start">
+
+      {/* Menu List */}
+      <div className="mb-4">
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Buy</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Sell</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Rent</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Manage</h2>
+      </div>
+
+      {/* Tags */}
+      <div className="d-flex flex-wrap gap-2 mb-4">
+        <span
+          className="px-3 py-2 text-white"
+          style={{
+            background: "#D6A84C",
+            borderRadius: "1000px",
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+          }}
+        >
+        Matching & viewings
+        </span>
+
+        <span
+          className="px-3 py-2 text-white"
+          style={{
+            background: "#D6A84C",
+            borderRadius: "1000px",
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+          }}
+        >
+         Contracts & renewals
+        </span>
+      </div>
+
+      {/* Description */}
+      <p
+        style={{
+          fontFamily: "Montserrat",
+          fontSize: "22px",
+          color: "#111827",
+        }}
+      >
+      For buyers and investors. Find the right property and move forward with confidence.
+      </p>
+
+      {/* Buttons */}
+      <div className="d-flex align-items-center gap-4 mt-4">
+
+        <button
+          className="btn d-flex align-items-center"
+          style={{
+            background: "#111827",
+            borderRadius: "32px",
+            padding: "6px 6px 6px 30px",
+            color: "white",
+            fontFamily: "Montserrat",
+            fontWeight: "600",
+          }}
+        >
+         Explore
+
+          <span
+            className="ms-3 d-flex align-items-center justify-content-center"
+            style={{
+              width: "50px",
+              height: "50px",
+              background: "#23304D",
+              borderRadius: "50%",
+              fontSize: "20px",
+            }}
+          >
+            →
+          </span>
+        </button>
+
+        <div
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "18px",
+            fontWeight: "500",
+            color: "#111827",
+            cursor: "pointer",
+          }}
+        >
+          Learn More
+        </div>
+
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="col-lg-7 text-center mt-5 mt-lg-0">
+      <img
+        src={img3}
+        alt="property"
+        className="img-fluid"
+        style={{
+          borderRadius: "50px",
+          maxHeight: "720px",
+          objectFit: "cover",
+        }}
+      />
+    </div>
+  </div>
+   <div
+    className="row align-items-center p-4 p-lg-5 mb-2"
+    style={{
+      background: "white",
+      borderRadius: "50px",
+    }}
+  >
+    {/* LEFT CONTENT */}
+    <div className="col-lg-5 text-start">
+
+      {/* Menu List */}
+      <div className="mb-4">
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Buy</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Sell</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Rent</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Manage</h2>
+      </div>
+
+      {/* Tags */}
+      <div className="d-flex flex-wrap gap-2 mb-4">
+        <span
+          className="px-3 py-2 text-white"
+          style={{
+            background: "#D6A84C",
+            borderRadius: "1000px",
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+          }}
+        >
+        Tenant Management
+        </span>
+
+        <span
+          className="px-3 py-2 text-white"
+          style={{
+            background: "#D6A84C",
+            borderRadius: "1000px",
+            fontFamily: "Montserrat",
+            fontSize: "16px",
+          }}
+        >
+        Owner support.
+        </span>
+      </div>
+
+      {/* Description */}
+      <p
+        style={{
+          fontFamily: "Montserrat",
+          fontSize: "22px",
+          color: "#111827",
+        }}
+      >
+       For property owners. Property management, handled end-to-end.
+      </p>
+
+      {/* Buttons */}
+      <div className="d-flex align-items-center gap-4 mt-4">
+
+        <button
+          className="btn d-flex align-items-center"
+          style={{
+            background: "#111827",
+            borderRadius: "32px",
+            padding: "6px 6px 6px 30px",
+            color: "white",
+            fontFamily: "Montserrat",
+            fontWeight: "600",
+          }}
+        >
+         Manage Property
+          <span
+            className="ms-3 d-flex align-items-center justify-content-center"
+            style={{
+              width: "50px",
+              height: "50px",
+              background: "#23304D",
+              borderRadius: "50%",
+              fontSize: "20px",
+            }}
+          >
+            →
+          </span>
+        </button>
+
+        <div
+          style={{
+            fontFamily: "Montserrat",
+            fontSize: "18px",
+            fontWeight: "500",
+            color: "#111827",
+            cursor: "pointer",
+          }}
+        >
+          Learn More
+        </div>
+
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="col-lg-7 text-center mt-5 mt-lg-0">
+      <img
+        src={img4}
+        alt="property"
+        className="img-fluid"
+        style={{
+          borderRadius: "50px",
+          maxHeight: "720px",
+          objectFit: "cover",
+        }}
+      />
+    </div>
+  </div>
+</div>
+
+ <section style={{ background: "#F7F8FA", padding: "60px 0" }}>
+      <div className="container">
+
+        <div className="row g-4">
+
+          {cards.map((card, index) => (
+            <div className="col-lg-4 col-md-6" key={index}>
+              <div
+                className="h-100"
+                style={{
+                  background: "white",
+                  borderRadius: "25px",
+                  boxShadow: "0px 4px 40px rgba(0,0,0,0.05)",
+                  overflow: "hidden",
+                }}
+              >
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  className="img-fluid"
+                  style={{
+                    width: "100%",
+                    height: "250px",
+                    objectFit: "cover",
+                  }}
+                />
+
+                <div className="p-4 text-start">
+
+                  <h4
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontWeight: "600",
+                      fontSize: "18px",
+                      color: "#111827",
+                    }}
+                  >
+                    {card.title}
+                  </h4>
+
+                  <p
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: "14px",
+                      color: "#111827",
+                      marginTop: "10px",
+                    }}
+                  >
+                    {card.text}
+                  </p>
+
+                  {card.button && (
+                    <button
+                      className="btn mt-3 d-flex align-items-center"
+                      style={{
+                        background: "#E6E6E6",
+                        borderRadius: "32px",
+                        padding: "6px 6px 6px 25px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {card.button}
+
+                      <span
+                        className="ms-3 d-flex align-items-center justify-content-center"
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                          background: "#727883",
+                          borderRadius: "50%",
+                          color: "white",
+                          fontSize: "20px",
+                        }}
+                      >
+                       <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.3193 13.9512L29.2448 13.9512L29.2448 24.8766" stroke="#111827" stroke-width="1.90909" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.9473 29.2441L29.0935 14.0979" stroke="#111827" stroke-width="1.90909" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                      </span>
+                    </button>
+                  )}
+
+                </div>
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="d-flex justify-content-center mt-5 gap-2">
+          <div style={{ width: 35, height: 10, background: "#111827", borderRadius: 20 }} />
+          <div style={{ width: 10, height: 10, background: "#D9D9D9", borderRadius: "50%" }} />
+          <div style={{ width: 10, height: 10, background: "#D9D9D9", borderRadius: "50%" }} />
+          <div style={{ width: 10, height: 10, background: "#D9D9D9", borderRadius: "50%" }} />
+        </div>
+
+      </div>
+    </section>
+
+ <section
       style={{
         background: "#090E17",
         padding: "80px 0",
@@ -974,12 +818,11 @@ For buyers and investors. Find the right property and move forward with confiden
                   minHeight: "140px",
                 }}
               >
-                <div>
+                <div className="text-start">
                   <h5
                     style={{
-                      fontSize: "24px",
+                      fontSize: "18px",
                       fontWeight: "600",
-                      fontFamily: "Montserrat",
                       color: "#111827",
                     }}
                   >
@@ -988,9 +831,8 @@ For buyers and investors. Find the right property and move forward with confiden
 
                   <p
                     style={{
-                      fontSize: "18px",
+                      fontSize: "14px",
                       color: "#888",
-                      fontFamily: "Montserrat",
                       marginBottom: "0",
                     }}
                   >
@@ -1002,14 +844,18 @@ For buyers and investors. Find the right property and move forward with confiden
                 <div
                   className="d-flex align-items-center justify-content-center"
                   style={{
-                    width: "50px",
-                    height: "50px",
+                    width: "40px",
+                    height: "40px",
                     background: "#DFDFDF",
                     borderRadius: "50%",
-                    fontSize: "20px",
+                    fontSize: "18px",
                   }}
                 >
-                  →
+               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.3193 13.9512L29.2448 13.9512L29.2448 24.8766" stroke="#111827" stroke-width="1.90909" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.9473 29.2441L29.0935 14.0979" stroke="#111827" stroke-width="1.90909" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
                 </div>
               </div>
             </div>
@@ -1026,12 +872,11 @@ For buyers and investors. Find the right property and move forward with confiden
                 minHeight: "140px",
               }}
             >
-              <div>
+              <div className="text-start">
                 <h5
                   style={{
-                    fontSize: "24px",
+                    fontSize: "18px",
                     fontWeight: "600",
-                    fontFamily: "Montserrat",
                     color: "white",
                   }}
                 >
@@ -1040,9 +885,8 @@ For buyers and investors. Find the right property and move forward with confiden
 
                 <p
                   style={{
-                    fontSize: "18px",
+                    fontSize: "14px",
                     color: "#888",
-                    fontFamily: "Montserrat",
                     marginBottom: "0",
                   }}
                 >
@@ -1054,98 +898,70 @@ For buyers and investors. Find the right property and move forward with confiden
               <div
                 className="d-flex align-items-center justify-content-center"
                 style={{
-                  width: "50px",
-                  height: "50px",
+                  width: "40px",
+                  height: "40px",
                   background: "#DFDFDF",
                   borderRadius: "50%",
                   fontSize: "20px",
                 }}
               >
-                →
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.3193 13.9512L29.2448 13.9512L29.2448 24.8766" stroke="#111827" stroke-width="1.90909" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.9473 29.2441L29.0935 14.0979" stroke="#111827" stroke-width="1.90909" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-     <section style={{ background: "#F7F8FA", padding: "60px 0" }}>
+    <section style={{ background: "#F7F8FA", padding: "60px 0" }}>
       <div className="container">
-        <div
-          className="position-relative text-center text-white p-5"
-          style={{
-            background: "#090E17",
-            borderRadius: "25px",
-            overflow: "hidden",
-            minHeight: "700px",
-          }}
-        >
-          {/* Decorative Glow */}
-          <div
-            style={{
-              position: "absolute",
-              right: "-200px",
-              bottom: "-200px",
-              width: "500px",
-              height: "500px",
-              background: "#8962FF",
-              opacity: 0.6,
-              filter: "blur(80px)",
-              borderRadius: "50%",
-            }}
-          />
+        <div className="row g-4">
 
-          {/* Heading */}
-          <h2
-            className="fw-semibold"
-            style={{
-              fontSize: "48px",
-              fontFamily: "Montserrat",
-            }}
-          >
-            Are you a real estate agent?
-          </h2>
+          {stats.map((item, index) => (
+            <div className="col-lg-3 col-md-6" key={index}>
+              <div
+                className="p-4 h-100"
+                style={{
+                  background: "white",
+                  borderRadius: "25px",
+                }}
+              >
+                <div className="d-flex flex-column justify-content-between h-100">
+                  
+                  <h2
+                    style={{
+                      color: "#0F7B6C",
+                      fontSize: "62px",
+                      fontFamily: "Impact",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    {item.number}
+                  </h2>
 
-          {/* Description */}
-          <p
-            className="mx-auto mt-3"
-            style={{
-              maxWidth: "850px",
-              fontSize: "24px",
-              fontFamily: "Montserrat",
-            }}
-          >
-            Access exclusive inventory, manage your deals, and work smarter
-            with tools designed specifically for real estate professionals.
-          </p>
+                  <p
+                    style={{
+                      color: "#111827",
+                      fontSize: "16px",
+                      fontFamily: "Montserrat",
+                      marginBottom: "0",
+                    }}
+                  >
+                    {item.label}
+                  </p>
 
-         
-
-          {/* Download Buttons */}
-          <div className="hero-buttons d-flex align-items-center justify-content-center gap-4 mt-10">
-                         {/* Google Play Button */}
-                         <a href="#" className="cursor-pointer">
-                           <img src={googleplay} alt="Google Play" className="h-14 md:h-16" />
-                         </a>
-         
-                         {/* App Store Button */}
-                         <a href="#" className="cursor-pointer">
-                           <img src={applestore} alt="App Store" className="h-14 md:h-16" />
-                         </a>
-                       </div>
-                        {/* App Images */}
-          <div className="row justify-content-center mt-5">
-            <div className="col-md-6 text-center">
-              <img
-                src={mob}
-                alt="app"
-                className="img-fluid"
-                style={{ maxHeight: "500px" }}
-              />
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
+
         </div>
       </div>
     </section>
+    
     <FAQ/>
       <Footer />
     </>
