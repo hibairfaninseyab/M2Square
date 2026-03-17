@@ -67,7 +67,7 @@ const TokenizedHomes = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center', position: "relative"
       }}>
-        <div className="container" style={{ maxWidth: "1200px" }}>
+        <div >
           <h1 style={{ fontSize: "56px", fontWeight: "800", lineHeight: "1.2", marginBottom: "16px" }}>
             The M<sup>2</sup> Square <br /> <span style={{ color: "#8B5CF6" }}>Marketplace</span> Is now Live!
           </h1>
@@ -88,7 +88,7 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 2. PROPERTIES SELECTION */}
-      <section style={{ padding: "80px 0", background: "#060A11" }}>
+      <section style={{ padding: "50px 0", background: "#060A11" }}>
         <style>
           {`
             .carousel-container::-webkit-scrollbar { display: none; }
@@ -226,7 +226,7 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 3. FOUR FEATURES */}
-      <section style={{ padding: "100px 0", background: "#060A11" }}>
+      <section style={{ padding: "50px 0", background: "#060A11" }}>
         <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "60px 40px", maxWidth: "1100px" }}>
           {[
             {
@@ -262,7 +262,7 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 4. TOKENIZATION BANNERS */}
-      <section style={{ padding: "100px 0", background: "#060A11" }}>
+      <section style={{ padding: "50px 0", background: "#060A11" }}>
         <div className="container" style={{ maxWidth: "1200px", display: "flex", flexDirection: "column", gap: "80px" }}>
 
           {/* First Banner */}
@@ -325,7 +325,7 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 5. STEPS ROW */}
-      <section style={{ padding: "100px 0", textAlign: "center", background: "#060A11" }}>
+      <section style={{ padding: "50px 0", textAlign: "center", background: "#060A11" }}>
         <div className="container" style={{ maxWidth: "1200px" }}>
           <h2 style={{ fontSize: "42px", fontWeight: "800", marginBottom: "16px", color: "white" }}>It’s Really This Simple</h2>
           <p style={{ color: "rgba(255,255,255,0.6)", maxWidth: "600px", margin: "0 auto 60px", fontSize: "16px", lineHeight: "1.6" }}>
@@ -337,17 +337,17 @@ const TokenizedHomes = () => {
               {
                 title: "Buy",
                 desc: "Browse our expertly curated portfolio and invest in tokenised Saudi Arabia properties from SAR 2,000.",
-                image: "../src/assets/image_3.png"
+                image: "../src/assets/image_3.svg"
               },
               {
                 title: "Mortgage",
                 desc: <>Receive returns from monthly rental income and capital appreciation, directly in your M<sup>2</sup> Square Mint Wallet.</>,
-                image: "../src/assets/image_4.png"
+                image: "../src/assets/image_4.svg"
               },
               {
                 title: "Mint",
                 desc: <>Easily sell your tokens on the M<sup>2</sup> Square Mint Marketplace, offering faster and flexible transactions.</>,
-                image: "../src/assets/image_5.png"
+                image: "../src/assets/image_5.svg"
               }
             ].map((step, index) => (
               <div key={index} style={{ background: "#111428", borderRadius: "32px", padding: "40px 30px 0", border: "1px solid rgba(255,255,255,0.03)", textAlign: "left", display: "flex", flexDirection: "column", gap: "16px", overflow: "hidden" }}>
@@ -365,7 +365,7 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 5B. BREAKING DOWN BARRIERS */}
-      <section style={{ padding: "100px 0", background: "#060A11" }}>
+      <section style={{ padding: "50px 0", background: "#060A11" }}>
         <div className="container" style={{ maxWidth: "1200px" }}>
           <h2 style={{ fontSize: "42px", fontWeight: "800", textAlign: "center", marginBottom: "16px", color: "white" }}>Breaking Down Barriers</h2>
           <p style={{ color: "rgba(255,255,255,0.6)", maxWidth: "600px", margin: "0 auto 60px", fontSize: "16px", textAlign: "center" }}>
@@ -590,7 +590,7 @@ const TokenizedHomes = () => {
       </section> */}
 
       {/* 8. WE TAKE CARE */}
-      <section style={{ padding: "100px 0", background: "#060A11" }}>
+      <section style={{ padding: "50px 0", background: "#060A11" }}>
         <div className="container" style={{ maxWidth: "1100px", textAlign: "center" }}>
           <h2 style={{ fontSize: "42px", fontWeight: "800", marginBottom: "60px", color: "white" }}>We Take Care Of It All</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "50px 60px", textAlign: "left" }}>
