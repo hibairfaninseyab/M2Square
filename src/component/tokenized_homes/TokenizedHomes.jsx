@@ -337,17 +337,17 @@ const TokenizedHomes = () => {
               {
                 title: "Buy",
                 desc: "Browse our expertly curated portfolio and invest in tokenised Saudi Arabia properties from SAR 2,000.",
-                image: "../src/assets/image_3.svg"
+                image: "../src/assets/image_3.svg?v=2"
               },
               {
                 title: "Mortgage",
                 desc: <>Receive returns from monthly rental income and capital appreciation, directly in your M<sup>2</sup> Square Mint Wallet.</>,
-                image: "../src/assets/image_4.svg"
+                image: "../src/assets/image_4.svg?v=2"
               },
               {
                 title: "Mint",
                 desc: <>Easily sell your tokens on the M<sup>2</sup> Square Mint Marketplace, offering faster and flexible transactions.</>,
-                image: "../src/assets/image_5.svg"
+                image: "../src/assets/image_5.svg?v=2"
               }
             ].map((step, index) => (
               <div key={index} style={{ background: "#111428", borderRadius: "32px", padding: "40px 30px 0", border: "1px solid rgba(255,255,255,0.03)", textAlign: "left", display: "flex", flexDirection: "column", gap: "16px", overflow: "hidden" }}>
