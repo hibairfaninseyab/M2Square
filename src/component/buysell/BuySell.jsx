@@ -16,6 +16,7 @@ import bg from "../../assets/BuySell/bg.svg";
 import value from "../../assets/BuySell/value.svg";
 import invest from "../../assets/BuySell/invest.svg";
 import earn from "../../assets/BuySell/earn.svg";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -39,8 +40,8 @@ const services = [
     desc: "We assist buyers in securing financing and help sellers settle existing property liens.",
   },
   {
-    title: "Golden Visa Support",
-    desc: "We guide eligible investors through the full process of securing a UAE Golden Visa.",
+    title: "Saudi Premium Residency Support",
+    desc: "We guide eligible investors through the full process of securing a Saudi Premium Residency Support.",
   },
   {
     title: "Conveyancing Support",
@@ -72,7 +73,7 @@ const services = [
           travel, no paperwork, and no hassle.
         </>
       ),
-      button: "Speak to an advisor",
+       button: "Free Consultation",
       img: invest,
     },
     {
@@ -84,6 +85,7 @@ const services = [
           monthly income while your investment appreciates over time.
         </>
       ),
+       button: "Free Consultation",
       img: earn,
     },
   ];
@@ -336,8 +338,8 @@ const BuySellPage = () => {
 
       {/* Menu List */}
       <div className="mb-4">
-        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Buy</h2>
-        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Sell</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF"}}>Buy</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Sell</h2>
         <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Rent</h2>
         <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Manage</h2>
       </div>
@@ -451,9 +453,9 @@ const BuySellPage = () => {
 
       {/* Menu List */}
       <div className="mb-4">
-        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Buy</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Buy</h2>
         <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Sell</h2>
-        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Rent</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Rent</h2>
         <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Manage</h2>
       </div>
 
@@ -566,10 +568,10 @@ const BuySellPage = () => {
 
       {/* Menu List */}
       <div className="mb-4">
-        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Buy</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Buy</h2>
         <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Sell</h2>
         <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Rent</h2>
-        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#9CA3AF" }}>Manage</h2>
+        <h2 style={{ fontFamily: "Montserrat", fontWeight: "700", fontSize: "44px", color: "#111827" }}>Manage</h2>
       </div>
 
       {/* Tags */}
@@ -721,36 +723,52 @@ const BuySellPage = () => {
                     {card.text}
                   </p>
 
-                  {card.button && (
-                    <button
-                      className="btn mt-3 d-flex align-items-center"
-                      style={{
-                        background: "#E6E6E6",
-                        borderRadius: "32px",
-                        padding: "6px 6px 6px 25px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {card.button}
+                 {card.button && (
+  <Link to="/contact" className="text-decoration-none">
+    <button
+      className="btn mt-3 d-flex align-items-center" style={{ background: "#E6E6E6", borderRadius: "32px", padding: "6px 6px 6px 25px", fontWeight: "600", }}
+    >
+      {card.button}
 
-                      <span
-                        className="ms-3 d-flex align-items-center justify-content-center"
-                        style={{
-                          width: "40px",
-                          height: "40px",
-                          background: "#727883",
-                          borderRadius: "50%",
-                          color: "white",
-                          fontSize: "20px",
-                        }}
-                      >
-                       <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.3193 13.9512L29.2448 13.9512L29.2448 24.8766" stroke="#111827" stroke-width="1.90909" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M13.9473 29.2441L29.0935 14.0979" stroke="#111827" stroke-width="1.90909" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-                      </span>
-                    </button>
-                  )}
+      <span
+        className="ms-3 d-flex align-items-center justify-content-center"
+        style={{
+          width: "40px",
+          height: "40px",
+          background: "#727883",
+          borderRadius: "50%",
+          color: "white",
+          fontSize: "20px",
+        }}
+      >
+        <svg
+          width="44"
+          height="44"
+          viewBox="0 0 44 44"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3193 13.9512L29.2448 13.9512L29.2448 24.8766"
+            stroke="#111827"
+            strokeWidth="1.90909"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13.9473 29.2441L29.0935 14.0979"
+            stroke="#111827"
+            strokeWidth="1.90909"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </span>
+    </button>
+  </Link>
+)}
 
                 </div>
               </div>
@@ -760,12 +778,12 @@ const BuySellPage = () => {
         </div>
 
         {/* Pagination Dots */}
-        <div className="d-flex justify-content-center mt-5 gap-2">
+        {/* <div className="d-flex justify-content-center mt-5 gap-2">
           <div style={{ width: 35, height: 10, background: "#111827", borderRadius: 20 }} />
           <div style={{ width: 10, height: 10, background: "#D9D9D9", borderRadius: "50%" }} />
           <div style={{ width: 10, height: 10, background: "#D9D9D9", borderRadius: "50%" }} />
           <div style={{ width: 10, height: 10, background: "#D9D9D9", borderRadius: "50%" }} />
-        </div>
+        </div> */}
 
       </div>
     </section>

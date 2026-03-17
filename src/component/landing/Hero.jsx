@@ -228,7 +228,7 @@ const Hero = () => {
 
 
 
-          <div className="hero-container">
+          <div className="hero-cont">
 
             {/* LEFT CONTENT */}
             <div className="hero-content">
@@ -327,33 +327,39 @@ const Hero = () => {
 
         {/* Step 01 */}
         <div className="row align-items-center mb-5">
-          <div className="col-md-5 mb-4 mb-md-0">
-            <div className="d-flex flex-column text-start gap-3">
-              <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
-                Step 01
-              </span>            <h2 className="fw-bold display-6">Browse</h2>
-              <p className="text-secondary fs-5">
-                Explore curated, income-generating Saudi properties verified and handpicked by our leading experts.
-              </p>
-              <button className="btn text-success d-flex align-items-center gap-2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.9523 3.05293C5.1303 0.707361 21.5135 6.4532 21.5 8.551C21.4847 10.9299 15.1019 11.6617 13.3328 12.1581C12.2689 12.4565 11.984 12.7625 11.7387 13.8781C10.6277 18.9305 10.0699 21.4435 8.7986 21.4996C6.7722 21.5892 0.826701 5.342 2.9523 3.05293Z" stroke="#0F7B6C" stroke-width="1.5" />
-                  <path d="M12.5001 12.5L9.0001 9" stroke="#0F7B6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                Start Browsing
-              </button>
-            </div>
-          </div>
-          <div className="col-md-7">
-            <div className="rounded-4 d-flex justify-content-end" style={{ minHeight: "400px" }}>
-              <img src={step1} className="img-fluid h-60" alt="Step 01 visual" />
-            </div>
-          </div>
-        </div>
+  <div className="col-md-6 mb-4 mb-md-0">
+    <div className="d-flex flex-column text-start gap-3">
+      <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
+        Step 01
+      </span>
+      <h2 className="fw-bold display-6">Browse</h2>
+      <p className="text-secondary fs-5">
+        Explore curated, income-generating Saudi properties verified and handpicked by our leading experts.
+      </p>
+      <button className="btn text-success d-flex align-items-center gap-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.9523 3.05293C5.1303 0.707361 21.5135 6.4532 21.5 8.551C21.4847 10.9299 15.1019 11.6617 13.3328 12.1581C12.2689 12.4565 11.984 12.7625 11.7387 13.8781C10.6277 18.9305 10.0699 21.4435 8.7986 21.4996C6.7722 21.5892 0.826701 5.342 2.9523 3.05293Z" stroke="#0F7B6C" strokeWidth="1.5" />
+          <path d="M12.5001 12.5L9.0001 9" stroke="#0F7B6C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        Start Browsing
+      </button>
+    </div>
+  </div>
+  <div className="col-md-6">
+    <div className="rounded-4 d-flex justify-content-end" style={{ minHeight: "400px" }}>
+      <img
+        src={step1}
+        className="img-fluid rounded-4"
+        style={{ maxHeight: "700px", objectFit: "contain" }}
+        alt="Step 01 visual"
+      />
+    </div>
+  </div>
+</div>
 
         {/* Step 02 */}
         <div className="row align-items-center mb-5 flex-md-row-reverse">
-          <div className="col-md-5 mb-4 mb-md-0">
+          <div className="col-md-6 mb-4 mb-md-0">
             <div className="d-flex flex-column text-start gap-3">
               <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
                 Step 02
@@ -371,16 +377,21 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-7 ">
-            <div className="rounded-4 overflow-hidden" style={{ minHeight: "400px" }}>
-              <img src={step2} className="img-fluid" alt="Step 02 visual" />
-            </div>
-          </div>
+         <div className="col-md-6 ">
+    <div className="rounded-4 d-flex justify-content-start" style={{ minHeight: "400px" }}>
+      <img
+        src={step2}
+        className="img-fluid rounded-4"
+        style={{ maxHeight: "700px", objectFit: "contain" }}
+        alt="Step 02 visual"
+      />
+    </div>
+  </div>
         </div>
 
         {/* Step 03 */}
         <div className="row align-items-center mb-5">
-          <div className="col-md-5 mb-4 mb-md-0">
+          <div className="col-md-6 mb-4 mb-md-0">
             <div className="d-flex flex-column text-start gap-3">
               <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
                 Step 03
@@ -397,11 +408,16 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-7">
-            <div className="rounded-4 overflow-hidden" style={{ minHeight: "400px" }}>
-              <img src={step3} className="img-fluid" alt="Step 03 visual" />
-            </div>
-          </div>
+          <div className="col-md-6">
+    <div className="rounded-4 d-flex justify-content-end" style={{ minHeight: "400px" }}>
+      <img
+        src={step3}
+        className="img-fluid rounded-4"
+        style={{ maxHeight: "700px", objectFit: "contain" }}
+        alt="Step 01 visual"
+      />
+    </div>
+  </div>
         </div>
         {/* Step 04 */}
         <div className="row align-items-center mb-5 flex-md-row-reverse">
@@ -423,11 +439,16 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-7">
-            <div className="rounded-4 overflow-hidden" style={{ minHeight: "400px" }}>
-              <img src={step4} className="img-fluid" alt="Step 04 manage" />
-            </div>
-          </div>
+          <div className="col-md-6">
+    <div className="rounded-4 d-flex justify-content-start" style={{ minHeight: "400px" }}>
+      <img
+        src={step4}
+        className="img-fluid rounded-4"
+        style={{ maxHeight: "700px", objectFit: "contain" }}
+        alt="Step 01 visual"
+      />
+    </div>
+  </div>
         </div>
       </div>
 
@@ -603,7 +624,7 @@ const Hero = () => {
         </div>
 
         {/* Cards */}
-        <div className="container">
+        <div className="earn-container">
           <div className="row justify-content-center g-4">
             {cards.map((card, index) => (
               <div key={index} className="col-12 col-md-6 col-lg-3 d-flex">
@@ -623,12 +644,12 @@ const Hero = () => {
           </div>
 
           {/* Dots Indicator */}
-          <div className="d-flex justify-content-center gap-2 mt-4">
+          {/* <div className="d-flex justify-content-center gap-2 mt-4">
             <div className="bg-dark rounded-pill" style={{ width: 35, height: 10 }}></div>
             <div className="bg-secondary rounded-circle" style={{ width: 10, height: 10 }}></div>
             <div className="bg-secondary rounded-circle" style={{ width: 10, height: 10 }}></div>
             <div className="bg-secondary rounded-circle" style={{ width: 10, height: 10 }}></div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="bg-light py-5">

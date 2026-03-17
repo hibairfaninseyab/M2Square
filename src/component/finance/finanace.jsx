@@ -30,8 +30,10 @@ import bg from "../../assets/finance/bg.svg";
 import download from "../../assets/download.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Pagination } from "swiper/modules";
 import Testimonials from "../testimonials/Testimonials";
 import FAQ from "../faq/Faq";
+import { Link } from "react-router-dom";
 const FinancePage = () => {
 const statsData = [
   { value: "7.6K+", label: "Happy homeowners" },
@@ -196,7 +198,7 @@ const logos = [
       </div>
     </div>
       </section>
-      <div
+   <div
       style={{
         width: "1440px",
         height: "850px",
@@ -215,163 +217,81 @@ const logos = [
           textAlign: "center",
         }}
       >
-        <span
-          style={{
-            color: "var(--Primary-Text, #111827)",
-            fontSize: "40px",
-            fontFamily: "Montserrat",
-            fontWeight: 600,
-            wordWrap: "break-word",
-          }}
-        >
+        <span style={{ color: "var(--Primary-Text, #111827)", fontSize: 40, fontFamily: "Montserrat", fontWeight: 600 }}>
           Here’s why{" "}
         </span>
-        <span
-          style={{
-            color: "var(--Primary, #0F7B6C)",
-            fontSize: "40px",
-            fontFamily: "Montserrat",
-            fontWeight: 600,
-            wordWrap: "break-word",
-          }}
-        >
+        <span style={{ color: "var(--Primary, #0F7B6C)", fontSize: 40, fontFamily: "Montserrat", fontWeight: 600 }}>
           7,600+ homeowners
         </span>
-        <span
-          style={{
-            color: "var(--Primary-Text, #111827)",
-            fontSize: "40px",
-            fontFamily: "Montserrat",
-            fontWeight: 600,
-            wordWrap: "break-word",
-          }}
-        >
-          {" "}
-          chose M2 Square Mortgage
+        <span style={{ color: "var(--Primary-Text, #111827)", fontSize: 40, fontFamily: "Montserrat", fontWeight: 600 }}>
+          {" "}chose M2 Square Mortgage
         </span>
       </div>
 
-      {/* Cards Section */}
+      {/* Swiper Carousel */}
       <div
         style={{
           width: "1440px",
           left: 0,
           top: "164px",
           position: "absolute",
-          display: "inline-flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "30px",
+          padding: "0 50px", // optional padding for spacing
         }}
       >
-        {cardsData.map((card, index) => (
-          <div
-            key={index}
-            style={{
-              width: "625px",
-              height: "596px",
-              paddingBottom: "20px",
-              background: "var(--Card-Background, white)",
-              boxShadow: "0px 4px 43.7px rgba(0,0,0,0.05)",
-              borderRadius: "25px",
-              display: "inline-flex",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              gap: "20px",
-            }}
-          >
-            <img
-              style={{ width: "625px", height: "407px", borderRadius: "25px" }}
-              src={card.img}
-              alt={card.title}
-            />
-            <div
-              style={{
-                width: "585px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-                gap: "20px",
-              }}
-            >
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={30} // gap between slides
+          slidesPerView={2.5} // 2 full cards + partial third
+          pagination={{ clickable: true }}
+          style={{ paddingBottom: "50px" }}
+        >
+          {cardsData.map((card, index) => (
+            <SwiperSlide key={index}>
               <div
                 style={{
-                  alignSelf: "stretch",
-                  color: "var(--Primary-Text, #111827)",
-                  fontSize: "24px",
-                  fontFamily: "Montserrat",
-                  fontWeight: 600,
-                  wordWrap: "break-word",
+                  height: "596px",
+                  background: "var(--Card-Background, white)",
+                  boxShadow: "0px 4px 43.7px rgba(0,0,0,0.05)",
+                  borderRadius: "25px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  gap: "20px",
+                  width: "100%", // important! let Swiper control width
+                  maxWidth: "625px", // optional max width
+                  margin: "0 auto",
                 }}
               >
-                {card.title}
+                <img
+                  style={{ width: "100%", height: "407px", borderRadius: "25px", objectFit: "cover" }}
+                  src={card.img}
+                  alt={card.title}
+                />
+                <div
+                className="text-start"
+                  style={{
+                    width: "90%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    alignItems: "flex-start",
+                    gap: "20px",
+                  }}
+                >
+                  <div style={{ color: "var(--Primary-Text, #111827)", fontSize: 24, fontFamily: "Montserrat", fontWeight: 600 }}>
+                    {card.title}
+                  </div>
+                  <div className="mb-2" style={{ color: "var(--Primary-Text, #111827)", fontSize: 16, fontFamily: "Montserrat", fontWeight: 400 }}>
+                    {card.description}
+                  </div>
+                </div>
               </div>
-              <div
-                style={{
-                  alignSelf: "stretch",
-                  color: "var(--Primary-Text, #111827)",
-                  fontSize: "16px",
-                  fontFamily: "Montserrat",
-                  fontWeight: 400,
-                  wordWrap: "break-word",
-                }}
-              >
-                {card.description}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Pagination Dots */}
-      <div
-        style={{
-          left: "683.5px",
-          top: "790px",
-          position: "absolute",
-          display: "inline-flex",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          gap: "3px",
-        }}
-      >
-        <div
-          style={{
-            width: "35px",
-            height: "10px",
-            background: "var(--Primary-Text, #111827)",
-            borderRadius: "1000px",
-          }}
-        />
-        <div
-          style={{
-            width: "10px",
-            height: "10px",
-            background: "#D9D9D9",
-            borderRadius: "9999px",
-          }}
-        />
-        <div
-          style={{
-            width: "10px",
-            height: "10px",
-            background: "#D9D9D9",
-            borderRadius: "9999px",
-          }}
-        />
-        <div
-          style={{
-            width: "10px",
-            height: "10px",
-            background: "#D9D9D9",
-            borderRadius: "9999px",
-          }}
-        />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
-
         <section className="collaboration-section">
       <div className="container">
 
@@ -414,7 +334,7 @@ const logos = [
     
           {/* Step 01 */}
           <div className="row align-items-center mb-5">
-            <div className="col-md-5 mb-4 mb-md-0">
+            <div className="col-md-6 mb-4 mb-md-0">
               <div className="d-flex flex-column text-start gap-3">
      <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
                01
@@ -425,16 +345,21 @@ Get expert guidance to secure the right loan for your new property.             
                 
               </div>
             </div>
-            <div className="col-md-7">
-              <div className="rounded-4 d-flex justify-content-end" style={{ minHeight: "400px"}}>
-                <img src={step1} className="img-fluid h-60" alt="Step 01 visual" />
+            <div className="col-md-6">
+                <div className="rounded-4 d-flex justify-content-end" style={{ minHeight: "400px" }}>
+                  <img
+                    src={step1}
+                    className="img-fluid rounded-4"
+                    style={{ maxHeight: "700px", objectFit: "contain" }}
+                    alt="Step 01 visual"
+                  />
+                </div>
               </div>
-            </div>
           </div>
     
           {/* Step 02 */}
           <div className="row align-items-center mb-5 flex-md-row-reverse">
-            <div className="col-md-5 mb-4 mb-md-0">
+            <div className="col-md-6 mb-4 mb-md-0">
               <div className="d-flex flex-column text-start gap-3">
      <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
                02
@@ -445,16 +370,21 @@ Switch to better rates and terms for your existing mortgage.
                 
               </div>
             </div>
-            <div className="col-md-7 ">
-              <div className="rounded-4 overflow-hidden" style={{ minHeight: "400px" }}>
-                <img src={step2} className="img-fluid" alt="Step 02 visual" />
+            <div className="col-md-6">
+                <div className="rounded-4 d-flex justify-content-start" style={{ minHeight: "400px" }}>
+                  <img
+                    src={step2}
+                    className="img-fluid rounded-4"
+                    style={{ maxHeight: "700px", objectFit: "contain" }}
+                    alt="Step 01 visual"
+                  />
+                </div>
               </div>
-            </div>
           </div>
     
           {/* Step 03 */}
           <div className="row align-items-center mb-5">
-            <div className="col-md-5 mb-4 mb-md-0">
+            <div className="col-md-6 mb-4 mb-md-0">
               <div className="d-flex flex-column text-start gap-3">
      <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
                03
@@ -464,15 +394,20 @@ Unlock value from your property by getting cash without the need to sell.       
                 
               </div>
             </div>
-            <div className="col-md-7">
-              <div className="rounded-4 overflow-hidden" style={{ minHeight: "400px" }}>
-                <img src={step3} className="img-fluid" alt="Step 03 visual" />
-              </div>
-            </div>
+           <div className="col-md-6">
+               <div className="rounded-4 d-flex justify-content-end" style={{ minHeight: "400px" }}>
+                 <img
+                   src={step3}
+                   className="img-fluid rounded-4"
+                   style={{ maxHeight: "700px", objectFit: "contain" }}
+                   alt="Step 01 visual"
+                 />
+               </div>
+             </div>
           </div>
            {/* Step 04 */}
           <div className="row align-items-center mb-5 flex-md-row-reverse">
-            <div className="col-md-5 mb-4 mb-md-0">
+            <div className="col-md-6 mb-4 mb-md-0">
               <div className="d-flex flex-column text-start gap-3">
      <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
               04
@@ -491,11 +426,16 @@ Get pre-approved in minutes with the best rates in the market.
                 </button>
               </div>
             </div>
-            <div className="col-md-7">
-              <div className="rounded-4 overflow-hidden" style={{ minHeight: "400px" }}>
-                <img src={step4} className="img-fluid" alt="Step 04 manage" />
+            <div className="col-md-6">
+                <div className="rounded-4 d-flex justify-content-start" style={{ minHeight: "400px" }}>
+                  <img
+                    src={step4}
+                    className="img-fluid rounded-4"
+                    style={{ maxHeight: "700px", objectFit: "contain" }}
+                    alt="Step 01 visual"
+                  />
+                </div>
               </div>
-            </div>
           </div>
         </section>
         <section className="advisor">
@@ -540,28 +480,35 @@ Get pre-approved in minutes with the best rates in the market.
               Explore hassle-free home loan solutions with M2 Square Mortgage.
             </p>
 
-            <div className="d-inline-flex align-items-center bg-dark rounded-pill px-4 py-2 mt-3">
+           <div className="mt-3">
+  <Link
+    to="/contact"
+    className="d-inline-flex align-items-center bg-dark rounded-pill px-4 py-2 text-decoration-none"
+  >
+    {/* Text */}
+    <span
+      className="text-white fw-semibold me-3"
+      style={{ fontFamily: "Montserrat", fontSize: "18px" }}
+    >
+      Speak to an advisor
+    </span>
 
-              <span
-                className="text-white fw-semibold me-3"
-                style={{ fontFamily: "Montserrat", fontSize: "18px" }}
-              >
-                Speak to an advisor
-              </span>
-
-              <div
-                className="d-flex align-items-center justify-content-center"
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  background: "#0F7B6C",
-                  borderRadius: "50%",
-                }}
-              >
-                ➜
-              </div>
-
-            </div>
+    {/* Circle Arrow */}
+    <div
+      className="d-flex align-items-center justify-content-center"
+      style={{
+        width: "50px",
+        height: "50px",
+        background: "#0F7B6C",
+        borderRadius: "50%",
+        fontSize: "24px",
+        color: "white",
+      }}
+    >
+      ➜
+    </div>
+  </Link>
+</div>
           </div>
 
         </div>
