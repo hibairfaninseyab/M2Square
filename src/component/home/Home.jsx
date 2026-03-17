@@ -15,7 +15,7 @@ const titles = [
   "The best mortgage rates",
   "Refinance your Home",
   "Instant Pre-approvals",
-  "Get a Saudi Arabia Golden Visa"
+  "Get a Saudi Arabia Premium Residency"
 ];
 
 const images = [
@@ -75,17 +75,17 @@ const Home = () => {
             <div style={{ width: 40, height: 40, background: '#5222E2', borderRadius: 28, display: 'flex', alignItems: 'center', justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
           </div>
 
-          <div style={{ left: 293, top: 877, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400', letterSpacing: 0.72 }}>Dubai’s real estate from just AED 2,000.</div>
+          <div style={{ left: 293, top: 877, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400', letterSpacing: 0.72 }}>Saudi’s real estate from just SAR 2,000.</div>
         </div>
 
         {/* Block 2: Blocks Mortgage Mint Grid Container */}
         <div style={{ width: 1440, height: 1349, left: "50%", transform: "translateX(-50%)", top: 978, position: 'absolute', background: '#0B111E', overflow: 'hidden' }}>
-          <div style={{ width: 1077, left: 80, top: 50, position: 'absolute' }}><span style={{ color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>Own your </span><span style={{ color: '#0F7B6C', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>dream home</span><span style={{ color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>, or invest in a fraction of dubai - we got you covered</span></div>
+          <div style={{ width: 1077, left: 80, top: 50, position: 'absolute' }}><span style={{ color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>Own your </span><span style={{ color: '#0F7B6C', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>dream home</span><span style={{ color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>, or invest in a fraction of Saudi - we got you covered</span></div>
 
           {/* Mint */}
           <div style={{ width: 407, height: 536, left: 952, top: 208, position: 'absolute', background: '#090E17', borderRadius: 25, padding: 30 }}>
             <div style={{ color: '#5222E2', fontSize: 32, fontFamily: 'Montserrat', fontWeight: '700', textTransform: 'capitalize', marginBottom: 15 }}>Mint</div>
-            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400', marginBottom: 30 }}>Buy, sell & trade tokenized real estate in Dubai backed by blockchain technology.</div>
+            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400', marginBottom: 30 }}>Buy, sell & trade tokenized real estate in Saudi backed by blockchain technology.</div>
             <img src="../src/assets/mint.png" style={{ width: "100%", height: "300px", objectFit: "contain", position: "absolute", bottom: 0, left: 0 }} alt="mint" />
             <div style={{ width: 32, height: 32, background: "#5222E2", borderRadius: "50%", position: "absolute", bottom: 20, right: 20, display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
           </div>
@@ -93,7 +93,7 @@ const Home = () => {
           {/* Blocks */}
           <div style={{ width: 407, height: 536, left: 80, top: 208, position: 'absolute', background: '#090E17', borderRadius: 25, padding: 30 }}>
             <div style={{ color: '#32BBFF', fontSize: 32, fontFamily: 'Montserrat', fontWeight: '700', textTransform: 'capitalize', marginBottom: 15 }}>Blocks</div>
-            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400' }}>Invest in a piece of Dubai’s real estate and earn passive income.</div>
+            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400' }}>Invest in a piece of Saudi’s real estate and earn passive income.</div>
             <img src="../src/assets/blocks.png" style={{ width: "100%", objectFit: "cover", borderRadius: 12 }} alt="mortgage" />
 
             <div style={{ width: 32, height: 32, background: "#32BBFF", borderRadius: "50%", position: "absolute", bottom: 20, right: 20, display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
@@ -143,7 +143,7 @@ const Home = () => {
       <section className="stats-section" style={{ background: '#F9FAFB', padding: '80px 0' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', maxWidth: '1280px' }}>
           {[
-            { number: "15Bn+", label: "AED in transactions", color: "#1D9F75" },
+            { number: "15Bn+", label: "SAR in transactions", color: "#1D9F75" },
             { number: "80K+", label: "Customers trust us", color: "#3B82F6" },
             { number: "11K+", label: "Real estate partners", color: "#D946EF" },
             { number: "4.6", label: "Rating on Google", color: "#FBBF24" }
@@ -231,7 +231,7 @@ const Home = () => {
         <div className="container">
           <div className="purple-banner" style={{ background: '#5222E2', borderRadius: '32px', padding: '60px 40px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '30px', overflow: 'hidden' }}>
             <h2 style={{ fontSize: '48px', fontFamily: 'Montserrat', fontWeight: '800', color: 'white', maxWidth: '800px', lineHeight: '1.2' }}>One app for all real estate agents</h2>
-            <p style={{ fontSize: '18px', fontFamily: 'Montserrat', fontWeight: '400', color: 'rgba(255, 255, 255, 0.9)', maxWidth: '750px', lineHeight: '1.6' }}>Unlock the full power of real estate tools — find and share listings, access in-depth project data, and earn commissions with Mortgage and Golden Visa referrals.</p>
+            <p style={{ fontSize: '18px', fontFamily: 'Montserrat', fontWeight: '400', color: 'rgba(255, 255, 255, 0.9)', maxWidth: '750px', lineHeight: '1.6' }}>Premium Residency</p>
 
             <button style={{ background: '#111827', border: 'none', borderRadius: '40px', padding: '6px 6px 6px 24px', display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer', transition: 'transform 0.2s', marginTop: '10px' }}>
               <span style={{ color: 'white', fontSize: '14px', fontWeight: '600', fontFamily: 'Montserrat' }}>Learn More</span>

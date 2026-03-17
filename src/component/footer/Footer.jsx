@@ -117,9 +117,9 @@ const Footer = () => {
 
       {/* Disclaimer */}
       <div className="disclaimer">
-        Hello! M2 Square Ltd is registered in Dubai International Financial
-        Centre (7381) and regulated by Dubai Financial Services Authority
-        (DFSA). Our registered office address is Unit 614, Level 6, Tower A,
+        Hello! M2 Square Ltd is registered in Saudi International Financial
+        Centre (7381) and regulated by Saudi Central Bank (SAMA)
+        . Our registered office address is Unit 614, Level 6, Tower A,
         Park Towers, DIFC, Saudi Arabia. By using M2 Square you agree to the
         terms & conditions, Cookie Policy and Privacy Policy. Risk Warning -
         Investment in property carries risk and you may not receive the

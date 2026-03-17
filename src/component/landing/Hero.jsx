@@ -91,7 +91,7 @@ const stats = [
     ),
   },
   {
-    title: "AED Rent Disbursed",
+    title: "SAR Rent Disbursed",
     value: "50Mn+",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +105,7 @@ const stats = [
     ),
   },
   {
-    title: "AED to get Started",
+    title: "SAR to get Started",
     value: "2,000",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,22 +135,22 @@ const logos = [
 const cards = [
   // {
   //   title: "Regulated and Secure",
-  //   text: "All investments on M2 Square operate under the Dubai Financial Services Authority (DFSA) framework. This ensures that client funds are segregated and protected and that every property investment is held in a special purpose vehicle (SPV) -- to safeguard ownership and reduce risk.",
+  //   text: "All investments on M2 Square operate under the Saudi Central Bank (SAMA) framework. This ensures that client funds are segregated and protected and that every property investment is held in a special purpose vehicle (SPV) -- to safeguard ownership and reduce risk.",
   //   img:client1,
   // },
   {
     title: "Invest From Anywhere",
-    text: "Whether you’re in Dubai, New York, London, or Singapore, you can become a property investor in minutes. PRYPCO Blocks makes it possible to browse, invest, and manage your portfolio entirely online — no travel, no paperwork, and no hassle. Real estate investing has never been this seamless or borderless.",
+    text: "Whether you’re in Saudi, New York, London, or Singapore, you can become a property investor in minutes. PRYPCO Blocks makes it possible to browse, invest, and manage your portfolio entirely online — no travel, no paperwork, and no hassle. Real estate investing has never been this seamless or borderless.",
     img: client2,
   },
   {
     title: "Value Investment",
-    text: "We analyze the Dubai real estate market to identify properties with strong long-term fundamentals, including location, yield potential, and growth trajectory. By focusing on value at entry, investors can build portfolios that balance steady income with future appreciation, reflecting a measured and research-driven investment strategy.",
+    text: "We analyze the Saudi real estate market to identify properties with strong long-term fundamentals, including location, yield potential, and growth trajectory. By focusing on value at entry, investors can build portfolios that balance steady income with future appreciation, reflecting a measured and research-driven investment strategy.",
     img: client3,
   },
   {
     title: "Earn Rental Income",
-    text: "Join thousands of investors who’ve already earned over AED 600,000 in rental payouts through PRYPCO Blocks. Every property generates steady monthly income, helping you grow your wealth effortlessly while your investment appreciates over time — all without the headaches of traditional property management.",
+    text: "Join thousands of investors who’ve already earned over SAR 600,000 in rental payouts through PRYPCO Blocks. Every property generates steady monthly income, helping you grow your wealth effortlessly while your investment appreciates over time — all without the headaches of traditional property management.",
     img: client4,
   },
 ];
@@ -160,44 +160,44 @@ const properties = [
     img: p1,
     status1: "Rented",
     status2: "Sold Out",
-    location1: "Downtown",
+    location1: "Al Murabba District, Riyadh",
     type1: "Townhouse",
     title: "3 Bedroom Townhouse",
-    price: "AED 1,850,000",
-    valuation: "AED 2,050,000",
+    price: "SAR 1,850,000",
+    valuation: "SAR 2,050,000",
     roi: "8.75%",
   },
   {
     img: p2,
     status1: "Ready",
     status2: "Available",
-    location1: "Jumeirah Village Circle",
+    location1: "Al Faisaliyah District, Dammam",
     type1: "Apartment",
     title: "One Bedroom Apartment",
-    price: "AED 1,144,000",
-    valuation: "AED 1,229,896",
+    price: "SAR 1,144,000",
+    valuation: "SAR 1,229,896",
     roi: "10.64%",
   },
   {
     img: p3,
     status1: "Ready",
     status2: "Available",
-    location1: "Business Bay",
+    location1: "Al Aziziyah District",
     type1: "Apartment",
     title: "Studio Apartment",
-    price: "AED 950,000",
-    valuation: "AED 1,020,000",
+    price: "SAR 950,000",
+    valuation: "SAR 1,020,000",
     roi: "9.5%",
   },
   {
     img: p4,
     status1: "Ready",
     status2: "Available",
-    location1: "Business Bay",
+    location1: "Al Aziziyah District",
     type1: "Apartment",
     title: "Studio Apartment",
-    price: "AED 950,000",
-    valuation: "AED 1,020,000",
+    price: "SAR 950,000",
+    valuation: "SAR 1,020,000",
     roi: "9.5%",
   },
 ];
@@ -209,9 +209,8 @@ const Hero = () => {
         {/* Background circles */}
         <img src={background} alt="Background" className="hero-bg" />
 
-        <div className="offer-bar">
+        {/* <div className="offer-bar">
           <div className="offer-list">
-            {/* Repeat offers array twice for smooth loop */}
             {offers.concat(offers).map((offer, index) => (
               <div key={index} className="offer-item">
                 <div
@@ -224,7 +223,7 @@ const Hero = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         <section className="hero">
 
 
@@ -240,21 +239,19 @@ const Hero = () => {
               </h1>
 
               <p className="hero-desc">
-                Invest in Dubai's best rental properties, starting from just AED 2,000.
+                Invest in Saudi's best rental properties, starting from just SAR 2,000.
                 Save up to 5% on your real estate investments this Ramadan.
               </p>
 
-              <div className="hero-buttons flex gap-4 mt-10">
-                {/* Google Play Button */}
+              {/* <div className="hero-buttons flex gap-4 mt-10">
                 <a href="#" className="cursor-pointer">
                   <img src={googleplay} alt="Google Play" className="h-14 md:h-16" />
                 </a>
 
-                {/* App Store Button */}
                 <a href="#" className="cursor-pointer">
                   <img src={applestore} alt="App Store" className="h-14 md:h-16" />
                 </a>
-              </div>
+              </div> */}
 
             </div>
 
@@ -324,7 +321,7 @@ const Hero = () => {
         <div className="text-center mb-5 px-lg-5">
           <h1 className="fw-medium display-5">
             Your <span className="text-success text-uppercase">digital gateway</span> to fractional ownership in
-            <span className="text-success text-uppercase"> Dubai’s real estate</span> market.
+            <span className="text-success text-uppercase"> Saudi’s real estate</span> market.
           </h1>
         </div>
 
@@ -336,7 +333,7 @@ const Hero = () => {
                 Step 01
               </span>            <h2 className="fw-bold display-6">Browse</h2>
               <p className="text-secondary fs-5">
-                Explore curated, income-generating Dubai properties verified and handpicked by our leading experts.
+                Explore curated, income-generating Saudi properties verified and handpicked by our leading experts.
               </p>
               <button className="btn text-success d-flex align-items-center gap-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -362,7 +359,7 @@ const Hero = () => {
                 Step 02
               </span>            <h2 className="fw-bold display-6">Invest</h2>
               <p className="text-secondary fs-5">
-                Build your investment portfolio with Blocks of properties, from only AED 2,000 on our crowdfunding fractional ownership platform.
+                Build your investment portfolio with Blocks of properties, from only SAR 2,000 on our crowdfunding fractional ownership platform.
               </p>
               <button className="btn text-success d-flex align-items-center gap-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -389,7 +386,7 @@ const Hero = () => {
                 Step 03
               </span>            <h2 className="fw-bold display-6">Earn</h2>
               <p className="text-secondary fs-5">
-                Build your investment portfolio with Blocks of properties, from only AED 2,000 on our crowdfunding fractional ownership platform.
+                Build your investment portfolio with Blocks of properties, from only SAR 2,000 on our crowdfunding fractional ownership platform.
               </p>
               <button className="btn text-success d-flex align-items-center gap-2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -706,7 +703,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <section className="bg-light py-5">
+      {/* <section className="bg-light py-5">
         <div className="container text-center mb-4 rounded-4" style={{ background: 'linear-gradient(134deg, #0F7B6C 0%, #13FBDD 100%)' }}>
           <div className="row">
             <div className="col d-flex flex-column justify-content-center align-items-start gap-3 p-5">
@@ -723,16 +720,16 @@ const Hero = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
       <Testimonials />
       <FAQ />
-      <section className="bg-light py-5">
+      {/* <section className="bg-light py-5">
         <div className="container text-center mb-4 rounded-4">
           <div className="row">
             <div className="col d-flex flex-column justify-content-center align-items-start gap-3 p-5">
               <h1 className="fw-bold text-black text-uppercase text-start" style={{ fontSize: "3rem" }}>
                 Download our <span className="text-success">handbook</span>.        </h1>
-              <p style={{ width: 360, color: 'var(--Light-Text, #9CA3AF)', fontSize: 20, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word' }}>Your ultimate guide to investing in Dubai’s real estate through fractional ownership.</p>
+              <p style={{ width: 360, color: 'var(--Light-Text, #9CA3AF)', fontSize: 20, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word' }}>Your ultimate guide to investing in Saudi’s real estate through fractional ownership.</p>
               <button className="btn btn-success btn-lg mt-4">
                 Download
               </button>
@@ -743,7 +740,7 @@ const Hero = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
