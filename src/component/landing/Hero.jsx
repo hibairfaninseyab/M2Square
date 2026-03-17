@@ -421,7 +421,7 @@ const Hero = () => {
         </div>
         {/* Step 04 */}
         <div className="row align-items-center mb-5 flex-md-row-reverse">
-          <div className="col-md-5 mb-4 mb-md-0">
+          <div className="col-md-6 mb-4 mb-md-0">
             <div className="d-flex flex-column text-start gap-3">
               <span className="px-4 py-2 bg-warning bg-opacity-10 rounded-pill fw-semibold text-warning align-self-start">
                 Step 04
