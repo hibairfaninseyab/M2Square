@@ -35,7 +35,7 @@ import FAQ from "../faq/Faq";
 const FinancePage = () => {
 const statsData = [
   { value: "7.6K+", label: "Happy homeowners" },
-  { value: "14Bn+", label: "Disbursed in AED" },
+  { value: "14Bn+", label: "Disbursed in SAR" },
   { value: "100%", label: "Digital service" },
   { value: "0%", label: "Fees ad charges" },
 ];
@@ -43,25 +43,25 @@ const cardsData = [
   {
     title: "Regulated and Secure",
     description:
-      "All investments on M2 Square operate under the Dubai Financial Services Authority (DFSA) framework. This ensures that client funds are segregated and protected and that every property investment is held in a special purpose vehicle (SPV) -- to safeguard ownership and reduce risk.",
+      "All investments on M2 Square operate under the Saudi Central Bank (SAMA) framework. This ensures that client funds are segregated and protected and that every property investment is held in a special purpose vehicle (SPV) -- to safeguard ownership and reduce risk.",
     img: img1,
   },
   {
     title: "Invest From Anywhere",
     description:
-      "Whether you’re in Dubai, New York, London, or Singapore, you can become a property investor in minutes. PRYPCO Blocks makes it possible to browse, invest, and manage your portfolio entirely online — no travel, no paperwork, and no hassle. Real estate investing has never been this seamless or borderless.",
+      "Whether you’re in Saudi, New York, London, or Singapore, you can become a property investor in minutes. PRYPCO Blocks makes it possible to browse, invest, and manage your portfolio entirely online — no travel, no paperwork, and no hassle. Real estate investing has never been this seamless or borderless.",
     img: img2,
   },
   {
     title: "Value Investment",
     description:
-      "We analyze the Dubai real estate market to identify properties with strong long-term fundamentals, including location, yield potential, and growth trajectory. By focusing on value at entry, investors can build portfolios that balance steady income with future appreciation, reflecting a measured and research-driven investment strategy.",
+      "We analyze the Saudi real estate market to identify properties with strong long-term fundamentals, including location, yield potential, and growth trajectory. By focusing on value at entry, investors can build portfolios that balance steady income with future appreciation, reflecting a measured and research-driven investment strategy.",
     img: img3,
   },
   {
     title: "Earn Rental Income",
     description:
-      "Join thousands of investors who’ve already earned over AED 600,000 in rental payouts through PRYPCO Blocks. Every property generates steady monthly income, helping you grow your wealth effortlessly while your investment appreciates over time — all without the headaches of traditional property management.",
+      "Join thousands of investors who’ve already earned over SAR 600,000 in rental payouts through PRYPCO Blocks. Every property generates steady monthly income, helping you grow your wealth effortlessly while your investment appreciates over time — all without the headaches of traditional property management.",
     img: img4,
   },
 ];
@@ -570,13 +570,13 @@ Get pre-approved in minutes with the best rates in the market.
         </section>
         <Testimonials />
         <FAQ/>
-         <section className="bg-light py-5">
+         {/* <section className="bg-light py-5">
               <div className="container text-center mb-4 rounded-4">
                 <div className="row">
                   <div className="col d-flex flex-column justify-content-center align-items-start gap-3 p-5">
                    <h1 className="fw-bold text-black text-uppercase text-start" style={{ fontSize: "3rem" }}>
         Download our <span className="text-success">handbook</span>.        </h1>
-        <p style={{width: 360, color: 'var(--Light-Text, #9CA3AF)', fontSize: 20, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word'}}>Your ultimate guide to investing in Dubai’s real estate through fractional ownership.</p>
+        <p style={{width: 360, color: 'var(--Light-Text, #9CA3AF)', fontSize: 20, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word'}}>Your ultimate guide to investing in Saudi’s real estate through fractional ownership.</p>
                 <button className="btn btn-success btn-lg mt-4">
                  Download
                 </button>
@@ -587,7 +587,7 @@ Get pre-approved in minutes with the best rates in the market.
                 </div>
                
               </div>
-            </section>
+            </section> */}
     </div>
     <Footer />
     </>
