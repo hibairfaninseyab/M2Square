@@ -87,8 +87,8 @@ const Header = () => {
         <nav
           className={`nav-menu d-flex flex-column flex-lg-row align-items-lg-center gap-3 ${menuOpen ? "d-flex" : "d-none d-lg-flex"}`}
         >
-          <div className="nav-item px-3 py-2">Explore <span className="arrow"></span></div>
-          <div className="nav-item px-3 py-2">Investor Hub <span className="arrow"></span></div>
+          <div className="nav-item px-3 py-2">Home</div>
+          <div className="nav-item px-3 py-2">Contact Us</div>
           <div
             ref={dropdownRef}
             className={`nav-item px-3 py-2 ${dropdownOpen ? "active" : ""}`}
@@ -101,7 +101,7 @@ const Header = () => {
               <div className="mega-menu-content">
 
                 {/* Left Sidebar */}
-                <div className="mega-menu-sidebar">
+                {/* <div className="mega-menu-sidebar">
                   <ul className="sidebar-list">
                     {leftSidebar.map((item, index) => (
                       <li key={index} className={`sidebar-item ${index === 0 ? "active" : ""}`}>
@@ -117,13 +117,13 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
 
                 {/* Right Grid Content */}
                 <div className="mega-menu-grid">
                   {cardItems.map((card, index) => (
                     <Link to={card.link} key={index} style={{ textDecoration: 'none', color: 'inherit', gridColumn: card.bgClass ? 'span 2' : 'span 1' }}>
-                      <div className={`mega-card ${card.bgClass}`} style={{ height: '100%' }}>
+                      <div className={`mega-card ${card.bgClass}`}>
                         <h5>{card.title}</h5>
                         <p>{card.subtitle}</p>
                         <button className="card-link-circle" style={{ backgroundColor: card.arrowBg }}>
