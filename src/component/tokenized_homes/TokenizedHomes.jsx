@@ -337,7 +337,8 @@ const TokenizedHomes = () => {
               {
                 title: "Buy",
                 desc: "Browse our expertly curated portfolio and invest in tokenised Saudi Arabia properties from SAR 2,000.",
-                image: "/assets/image3.svg?v=2"
+                // image: "/assets/image3.svg?v=2"
+                image: "/assets/finance-CI_Mu7CR.svg"
               },
               {
                 title: "Mortgage",
