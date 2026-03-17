@@ -28,116 +28,118 @@ const Home = () => {
   return (
     <div className="home-landing">
       <Header />
-      {/* TOP FIGMA COMPILATIONS ABSOLUTE WRAPPER */}
-      <div style={{ position: "relative", height: "2328px", width: "100%", background: "#090E17" }}>
-        {/* Block 1: Hero Frame */}
-        <div style={{
-          width: "100%", height: 979, left: "50%", transform: "translateX(-50%)", top: 0, position: 'absolute', backgroundImage: `url(${banner})`, backgroundSize: 'cover',
-          backgroundPosition: 'center', overflow: 'hidden', borderBottomRightRadius: 50, borderBottomLeftRadius: 50, zIndex: 10
-        }}>
-          <div style={{ width: 1440, height: 981, left: 0, top: 0, position: 'absolute', zIndex: -1 }} />
-          {/* <img style={{ width: 3393, height: 603, left: -827, top: 381, position: 'absolute' }} src="https://placehold.co/3393x603" alt="bg" /> */}
+      {/* 1. HERO FRAME */}
+      <section style={{
+        width: "100%",
+        minHeight: "950px",
+        backgroundImage: `url(${banner})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        overflow: 'hidden',
+        borderBottomRightRadius: 50,
+        borderBottomLeftRadius: 50,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '120px 20px 100px',
+        color: 'black',
+        position: 'relative',
+        zIndex: 10
+      }}>
+        {/* Toggle bar */}
+        <div style={{ display: 'flex', background: 'white', borderRadius: 1000, border: '1px solid #E5E7EB', padding: '4px', width: 'fit-content', alignItems: 'center', marginBottom: '40px' }}>
+          <div style={{ padding: '12px 24px', color: '#9CA3AF', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '400', cursor: 'pointer' }}>Financing</div>
+          <div style={{ padding: '12px 24px', background: '#0F7B6C', borderRadius: 1000, color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clipPath="url(#clip0_195_3078)">
+                <path fillRule="evenodd" clipRule="evenodd" d="M28.1688 21.1L21.0987 28.175C20.61 28.6625 19.8187 28.6625 19.3312 28.175C18.8425 27.6875 18.8425 26.8875 19.3312 26.4L24.4825 21.25H11.25C10.5588 21.25 10 20.6875 10 20C10 19.3125 10.5588 18.75 11.25 18.75H24.4825L19.3312 13.6C18.8425 13.1125 18.8425 12.325 19.3312 11.825C19.8187 11.3375 20.61 11.3375 21.0987 11.825L28.1688 18.9C28.4688 19.2 28.5625 19.6125 28.4938 20C28.5625 20.3875 28.4688 20.8 28.1688 21.1ZM20 0C8.95375 0 0 8.95 0 20C0 31.05 8.95375 40 20 40C31.0462 40 40 31.05 40 20C40 8.95 31.0462 0 20 0Z" fill="white" />
+              </g>
+              <defs><clipPath id="clip0_195_3078"><rect width="40" height="40" fill="white" /></clipPath></defs>
+            </svg>
+            Fractional
+          </div>
+        </div>
 
-          {/* Toggle bar */}
-          <div style={{ width: 406, height: 56, left: 517, top: 135, position: 'absolute' }}>
-            <div style={{ width: 406, height: 56, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 1000, border: '1px var(--Border-Color, #E5E7EB) solid' }} ></div>
-            <div style={{ width: 227, height: 52, left: 177, top: 2, position: 'absolute', background: '#0F7B6C', borderRadius: 1000 }} />
-            <div style={{ left: 30, top: 18, position: 'absolute', color: '#9CA3AF', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '400' }}>Financing</div>
-            <div style={{ left: 271, top: 18, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '500' }}>Fractional</div>
-            <div style={{ width: 40, height: 40, left: 183, top: 8, position: 'absolute', overflow: 'hidden' }}>
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_195_3078)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M28.1688 21.1L21.0987 28.175C20.61 28.6625 19.8187 28.6625 19.3312 28.175C18.8425 27.6875 18.8425 26.8875 19.3312 26.4L24.4825 21.25H11.25C10.5588 21.25 10 20.6875 10 20C10 19.3125 10.5588 18.75 11.25 18.75H24.4825L19.3312 13.6C18.8425 13.1125 18.8425 12.325 19.3312 11.825C19.8187 11.3375 20.61 11.3375 21.0987 11.825L28.1688 18.9C28.4688 19.2 28.5625 19.6125 28.4938 20C28.5625 20.3875 28.4688 20.8 28.1688 21.1ZM20 0C8.95375 0 0 8.95 0 20C0 31.05 8.95375 40 20 40C31.0462 40 40 31.05 40 20C40 8.95 31.0462 0 20 0Z" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_195_3078">
-                    <rect width="40" height="40" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
+        <h1 style={{ textAlign: 'center', color: 'black', fontSize: 64, fontFamily: 'Impact', fontWeight: '400', letterSpacing: 2.56, marginBottom: '20px', lineHeight: "1.1" }}>YOUR END-TO-END<br />REAL ESTATE PLATFORM.</h1>
+        <p style={{ textAlign: 'center', color: 'black', fontSize: 24, fontFamily: 'Montserrat', fontWeight: '400', maxWidth: '800px', marginBottom: '80px' }}>Navigate real estate on your terms, from traditional to tokenized, invest, finance, sell, or manage.</p>
 
+        {/* Action panel */}
+        <div style={{ background: 'white', borderRadius: 25, border: '1px #E5E7EB solid', padding: '24px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', maxWidth: '1062px', gap: '20px', flexWrap: 'wrap' }}>
+          <div style={{ color: 'black', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400', letterSpacing: 0.72 }}>Saudi’s real estate from just SAR 2,000.</div>
+          <div style={{ display: 'flex', gap: '15px' }}>
+            <div style={{ paddingTop: 4, paddingBottom: 4, paddingLeft: 30, paddingRight: 4, background: '#111827', borderRadius: 32, display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+              <div style={{ color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '600' }}>Visit Blocks</div>
+              <div style={{ width: 40, height: 40, background: '#32BBFF', borderRadius: 28, display: 'flex', alignItems: 'center', justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div style={{ paddingTop: 4, paddingBottom: 4, paddingLeft: 30, paddingRight: 4, background: '#111827', borderRadius: 32, display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+              <div style={{ color: 'white', fontSize: 16, fontFamily: 'Montserrat', fontWeight: '600' }}>Visit Mint</div>
+              <div style={{ width: 40, height: 40, background: '#5222E2', borderRadius: 28, display: 'flex', alignItems: 'center', justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. ECOSYSTEM FEATURES */}
+      <section style={{ padding: '100px 0', background: '#0B111E', color: 'white' }}>
+        <div className="container" style={{ maxWidth: '1280px' }}>
+          <h2 style={{ fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize', marginBottom: '60px', textAlign: 'left' }}>
+            Own your <span style={{ color: '#0F7B6C' }}>dream home</span>, or invest in a fraction of Saudi - we got you covered
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginBottom: '80px' }}>
+            {/* Blocks */}
+            <div style={{ background: '#090E17', borderRadius: 25, padding: 30, position: 'relative', display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '520px' }}>
+              <div style={{ color: '#32BBFF', fontSize: 32, fontFamily: 'Montserrat', fontWeight: '700', textTransform: 'capitalize' }}>Blocks</div>
+              <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400' }}>Invest in a piece of Saudi’s real estate and earn passive income.</div>
+              <div style={{ marginTop: 'auto', width: '100%', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="../src/assets/blocks.png" style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: 12 }} alt="blocks" />
+              </div>
+              <div style={{ width: 32, height: 32, background: "#32BBFF", borderRadius: "50%", position: "absolute", bottom: 20, right: 20, display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
+            </div>
+
+            {/* Mortgage */}
+            <div style={{ background: '#090E17', borderRadius: 25, padding: 30, position: 'relative', display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '520px' }}>
+              <div style={{ color: '#36B79B', fontSize: 32, fontFamily: 'Montserrat', fontWeight: '700', textTransform: 'capitalize' }}>Mortgage</div>
+              <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400' }}>Get pre-approved in minutes with the best mortgage rates in the market.</div>
+              <div style={{ marginTop: 'auto', width: '100%', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="../src/assets/mortage.png" style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: 12 }} alt="mortgage" />
+              </div>
+              <div style={{ width: 32, height: 32, background: "#36B79B", borderRadius: "50%", position: "absolute", bottom: 20, right: 20, display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
+            </div>
+
+            {/* Mint */}
+            <div style={{ background: '#090E17', borderRadius: 25, padding: 30, position: 'relative', display: 'flex', flexDirection: 'column', gap: '20px', minHeight: '520px' }}>
+              <div style={{ color: '#5222E2', fontSize: 32, fontFamily: 'Montserrat', fontWeight: '700', textTransform: 'capitalize' }}>Mint</div>
+              <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400' }}>Buy, sell & trade tokenized real estate in Saudi backed by blockchain technology.</div>
+              <div style={{ marginTop: 'auto', width: '100%', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="../src/assets/mint.png" style={{ width: "100%", height: "100%", objectFit: "contain" }} alt="mint" />
+              </div>
+              <div style={{ width: 32, height: 32, background: "#5222E2", borderRadius: "50%", position: "absolute", bottom: 20, right: 20, display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
             </div>
           </div>
 
-          <div style={{ left: "50%", transform: "translateX(-50%)", top: 216, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 64, fontFamily: 'Impact', fontWeight: '400', letterSpacing: 2.56, wordWrap: 'break-word' }}>YOUR END-TO-END<br />REAL ESTATE PLATFORM.</div>
-          <div style={{ left: "50%", transform: "translateX(-50%)", marginTop: 420, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 24, fontFamily: 'Montserrat', fontWeight: '400', wordWrap: 'break-word' }}>Navigate real estate on your terms, from traditional to tokenized, invest, finance, sell, or manage.</div>
-
-          {/* Action panel */}
-          <div style={{ width: 1062, height: 104, left: 189, top: 836, position: 'absolute', background: 'white', borderRadius: 25, border: '1px #E5E7EB solid' }} />
-
-          <div style={{ paddingTop: 4, paddingBottom: 4, paddingLeft: 30, paddingRight: 4, left: 829.50, top: 859, position: 'absolute', background: '#111827', borderRadius: 32, display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '600' }}>Visit Blocks</div>
-            <div style={{ width: 40, height: 40, background: '#32BBFF', borderRadius: 28, display: 'flex', alignItems: 'center', justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
+          {/* Eco Sub-bar */}
+          <div style={{ marginBottom: '40px' }}>
+            <h2 style={{ color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize', marginBottom: '10px' }}>Our Ecosystem</h2>
+            <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 24, fontFamily: 'Montserrat', fontWeight: '400' }}>Everything real estate on one platform</div>
           </div>
 
-          <div style={{ paddingTop: 4, paddingBottom: 4, paddingLeft: 30, paddingRight: 4, left: 1053.50, top: 859, position: 'absolute', background: '#111827', borderRadius: 32, display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '600' }}>Visit Mint</div>
-            <div style={{ width: 40, height: 40, background: '#5222E2', borderRadius: 28, display: 'flex', alignItems: 'center', justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
-          </div>
-
-          <div style={{ left: 293, top: 877, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400', letterSpacing: 0.72 }}>Saudi’s real estate from just SAR 2,000.</div>
-        </div>
-
-        {/* Block 2: Blocks Mortgage Mint Grid Container */}
-        <div style={{ width: 1440, height: 1349, left: "50%", transform: "translateX(-50%)", top: 978, position: 'absolute', background: '#0B111E', overflow: 'hidden' }}>
-          <div style={{ width: 1077, left: 80, top: 50, position: 'absolute' }}><span style={{ color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>Own your </span><span style={{ color: '#0F7B6C', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>dream home</span><span style={{ color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>, or invest in a fraction of Saudi - we got you covered</span></div>
-
-          {/* Mint */}
-          <div style={{ width: 407, height: 536, left: 952, top: 208, position: 'absolute', background: '#090E17', borderRadius: 25, padding: 30 }}>
-            <div style={{ color: '#5222E2', fontSize: 32, fontFamily: 'Montserrat', fontWeight: '700', textTransform: 'capitalize', marginBottom: 15 }}>Mint</div>
-            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400', marginBottom: 30 }}>Buy, sell & trade tokenized real estate in Saudi backed by blockchain technology.</div>
-            <img src="../src/assets/mint.png" style={{ width: "100%", height: "300px", objectFit: "contain", position: "absolute", bottom: 0, left: 0 }} alt="mint" />
-            <div style={{ width: 32, height: 32, background: "#5222E2", borderRadius: "50%", position: "absolute", bottom: 20, right: 20, display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
-          </div>
-
-          {/* Blocks */}
-          <div style={{ width: 407, height: 536, left: 80, top: 208, position: 'absolute', background: '#090E17', borderRadius: 25, padding: 30 }}>
-            <div style={{ color: '#32BBFF', fontSize: 32, fontFamily: 'Montserrat', fontWeight: '700', textTransform: 'capitalize', marginBottom: 15 }}>Blocks</div>
-            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400' }}>Invest in a piece of Saudi’s real estate and earn passive income.</div>
-            <img src="../src/assets/blocks.png" style={{ width: "100%", objectFit: "cover", borderRadius: 12 }} alt="mortgage" />
-
-            <div style={{ width: 32, height: 32, background: "#32BBFF", borderRadius: "50%", position: "absolute", bottom: 20, right: 20, display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
-          </div>
-
-          {/* Mortgage */}
-          <div style={{ width: 407, height: 536, left: 516, top: 208, position: 'absolute', background: '#090E17', borderRadius: 25, padding: 30 }}>
-            <div style={{ color: '#36B79B', fontSize: 32, fontFamily: 'Montserrat', fontWeight: '700', textTransform: 'capitalize', marginBottom: 15 }}>Mortgage</div>
-            <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '400', marginBottom: 20 }}>Get pre-approved in minutes with the best mortgage rates in the market.</div>
-            <img src="../src/assets/mortage.png" style={{ width: "100%", objectFit: "cover", borderRadius: 12 }} alt="mortgage" />
-            <div style={{ width: 32, height: 32, background: "#36B79B", borderRadius: "50%", position: "absolute", bottom: 20, right: 20, display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}><i className="fa-solid fa-arrow-right"></i></div>
-          </div>
-
-          {/* Ecosystem Sub-bar */}
-          <div style={{ width: 462, left: 80, top: 804, position: 'absolute', display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <div style={{ color: 'white', fontSize: 48, fontFamily: 'Montserrat', fontWeight: '600', textTransform: 'capitalize' }}>Our Ecosystem</div>
-            <div style={{ color: 'white', fontSize: 24, fontFamily: 'Montserrat', fontWeight: '400' }}>Everything real estate on one platform</div>
-          </div>
-
-          <div style={{ display: 'flex', gap: 16, position: 'absolute', left: 80, top: 947, width: 1280 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
             {titles.map((title, idx) => (
-              <div
-                key={idx}
-                style={{ width: 298, height: 352, background: '#090E17', borderRadius: 16, overflow: "hidden" }}
-              >
-                <img
-                  src={images[idx]}
-                  style={{ width: "100%", height: 220, objectFit: "cover" }}
-                  alt={title}
-                />
-                <div style={{ padding: 20, display: "flex", flexDirection: "column", justifyContent: "space-between", height: 132 }}>
-                  <div style={{ color: 'white', fontSize: 20, fontFamily: 'Montserrat', fontWeight: '600' }}>
-                    {title}
-                  </div>
+              <div key={idx} style={{ background: '#090E17', borderRadius: 16, overflow: "hidden", display: 'flex', flexDirection: 'column' }}>
+                <img src={images[idx]} style={{ width: "100%", height: 220, objectFit: "cover" }} alt={title} />
+                <div style={{ padding: 20, display: "flex", flexDirection: "column", justifyContent: "space-between", flexGrow: 1 }}>
+                  <div style={{ color: 'white', fontSize: 18, fontFamily: 'Montserrat', fontWeight: '600', marginBottom: '20px' }}>{title}</div>
                   <div style={{ display: "flex", justifyContent: "space-between", color: "#9CA3AF", fontSize: 14 }}>
-                    <span>Learn More</span>
-                    <i className="fa-solid fa-link"></i>
+                    <span>Learn More</span> <i className="fa-solid fa-link"></i>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* STATS */}
       <section className="stats-section" style={{ background: '#F9FAFB', padding: '80px 0' }}>
@@ -241,7 +243,7 @@ const Home = () => {
             </button>
 
             <div style={{ width: '100%', maxWidth: '1000px', marginTop: '40px', display: 'flex', justifyContent: 'center' }}>
-              <img src='../src/assets/one_app_for_all.png' style={{ width: '100%', height: 'auto', display: 'block', marginBottom: '-5px' }} alt="Three App Screens" />
+              <img src='../src/assets/one_app_for_all.png' style={{ height: 'auto', display: 'block', marginBottom: '-5px' }} alt="Three App Screens" />
             </div>
           </div>
         </div>

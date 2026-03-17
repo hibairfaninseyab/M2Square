@@ -87,8 +87,9 @@ const Header = () => {
         <nav
           className={`nav-menu d-flex flex-column flex-lg-row align-items-lg-center gap-3 ${menuOpen ? "d-flex" : "d-none d-lg-flex"}`}
         >
-          <div className="nav-item px-3 py-2">Home</div>
-          <div className="nav-item px-3 py-2">Contact Us</div>
+          <div className="nav-item px-3 py-2"><Link to='/home' style={{ textDecoration: 'none', color: 'inherit' }}>
+            Home</Link></div>
+          <div className="nav-item px-3 py-2"><Link to='/contact' style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</Link></div>
           <div
             ref={dropdownRef}
             className={`nav-item px-3 py-2 ${dropdownOpen ? "active" : ""}`}

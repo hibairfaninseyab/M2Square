@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Testimonials from "../testimonials/Testimonials";
@@ -38,11 +38,24 @@ const apartments = [
     currentValuation: "SAR 1,229,896",
     annualRoi: "10.64%",
     badges: ["Available", "Ready"]
+  },
+  {
+    id: 4,
+    image: "../src/assets/re_4.png",
+    title: "One Bedroom Apartment",
+    location: "Al Zahra District",
+    propertyType: "Apartment",
+    listingPrice: "SAR 1,144,000",
+    currentValuation: "SAR 1,229,896",
+    annualRoi: "10.64%",
+    badges: ["Available", "Ready"]
   }
 ];
 const TokenizedHomes = () => {
   const [activeTab, setActiveTab] = useState("Invest");
   const [expandedItem, setExpandedItem] = useState("Liquidity");
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const carouselRef = useRef(null);
 
   return (
     <div style={{ background: "#060A11", color: "white", fontFamily: "Montserrat", overflowX: "hidden" }}>
@@ -67,18 +80,43 @@ const TokenizedHomes = () => {
         </div>
 
         {/* Top tabs toolbar sub bar */}
-        <div style={{ display: "flex", justifyContent: "center", gap: "24px", padding: "20px 0", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-          {["Tokenized Homes", "Marketplace", "How It works", "Download App", "Dashboards", "Security"].map((t, i) => (
-            <span key={i} style={{ color: i === 0 ? "white" : "#6B7280", fontSize: "14px", fontWeight: i === 0 ? "600" : "400", cursor: "pointer" }}>{t}</span>
-          ))}
-        </div>
+        {/* <div style={{ display: "flex", justifyContent: "center", gap: "24px", padding: "20px 0", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+            {["Tokenized Homes", "Marketplace", "How It works", "Download App", "Dashboards", "Security"].map((t, i) => (
+              <span key={i} style={{ color: i === 0 ? "white" : "#6B7280", fontSize: "14px", fontWeight: i === 0 ? "600" : "400", cursor: "pointer" }}>{t}</span>
+            ))}
+          </div> */}
       </section>
 
       {/* 2. PROPERTIES SELECTION */}
       <section style={{ padding: "80px 0", background: "#060A11" }}>
+        <style>
+          {`
+            .carousel-container::-webkit-scrollbar { display: none; }
+            .carousel-container { -ms-overflow-style: none; scrollbar-width: none; }
+          `}
+        </style>
         <div className="container" style={{ maxWidth: "1280px" }}>
           <h2 style={{ fontSize: "36px", fontWeight: "700", textAlign: "center", marginBottom: "50px", color: "white" }}>The Future Of Real Estate Starts Here</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", marginBottom: "40px" }}>
+          <div
+            ref={carouselRef}
+            className="carousel-container"
+            onScroll={(e) => {
+              const scrollPosition = e.target.scrollLeft;
+              const cardWidth = e.target.offsetWidth / 3; // Approx card width
+              const index = Math.round(scrollPosition / cardWidth);
+              if (index >= 0 && index < apartments.length) {
+                setActiveCardIndex(index);
+              }
+            }}
+            style={{
+              display: "flex",
+              gap: "24px",
+              marginBottom: "40px",
+              overflowX: "auto",
+              scrollSnapType: "x mandatory",
+              paddingBottom: "10px"
+            }}
+          >
             {apartments.map((apartment) => (
               <div
                 key={apartment.id}
@@ -89,7 +127,10 @@ const TokenizedHomes = () => {
                   height: "500px",
                   borderRadius: "24px",
                   overflow: "hidden",
-                  position: "relative"
+                  position: "relative",
+                  width: "calc(33.333% - 16px)", // Matches earlier logic for 3 visible layout
+                  flexShrink: 0,
+                  scrollSnapAlign: "start"
                 }}
               >
                 {/* Overlay gradient */}
@@ -146,11 +187,31 @@ const TokenizedHomes = () => {
             ))}
           </div>
 
-          {/* Dots Pagination Placeholder */}
+          {/* Dots Pagination */}
           <div style={{ display: "flex", justifyContent: "center", gap: "8px", marginBottom: "40px" }}>
-            <div style={{ width: "24px", height: "8px", background: "#8B5CF6", borderRadius: "10px" }}></div>
-            <div style={{ width: "8px", height: "8px", background: "#1F2937", borderRadius: "50%" }}></div>
-            <div style={{ width: "8px", height: "8px", background: "#1F2937", borderRadius: "50%" }}></div>
+            {apartments.map((_, index) => (
+              <div
+                key={index}
+                onClick={() => {
+                  if (carouselRef.current) {
+                    const container = carouselRef.current;
+                    const targetNode = container.childNodes[index];
+                    if (targetNode) {
+                      const offsetLeft = targetNode.getBoundingClientRect().left - container.getBoundingClientRect().left + container.scrollLeft;
+                      container.scrollTo({ left: offsetLeft, behavior: "smooth" });
+                    }
+                  }
+                }}
+                style={{
+                  width: activeCardIndex === index ? "24px" : "8px",
+                  height: "8px",
+                  background: activeCardIndex === index ? "#8B5CF6" : "#1F2937",
+                  borderRadius: activeCardIndex === index ? "10px" : "50%",
+                  transition: "all 0.3s ease",
+                  cursor: "pointer"
+                }}
+              ></div>
+            ))}
           </div>
 
           <div style={{ textAlign: "center" }}>
@@ -554,7 +615,7 @@ const TokenizedHomes = () => {
       </section>
 
       {/* 9. MARKETPLACE CONTROL filter tabs */}
-      <section style={{ padding: "100px 0", background: "#060A11" }}>
+      {/* <section style={{ padding: "100px 0", background: "#060A11" }}>
         <div className="container" style={{ maxWidth: "1200px", textAlign: "center" }}>
           <h2 style={{ fontSize: "42px", fontWeight: "800", marginBottom: "30px", color: "white" }}>Our Marketplace, Your Control</h2>
 
@@ -595,7 +656,7 @@ const TokenizedHomes = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* REUSED COMPONENTS */}
       <Testimonials />
