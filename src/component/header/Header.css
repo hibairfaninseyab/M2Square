@@ -23,7 +23,8 @@
 }
 
 .nav-item:hover {
-  color: #0F7B6C; /* Matched to primary theme colour */
+  color: #0F7B6C;
+  /* Matched to primary theme colour */
 }
 
 /* Arrow styling */
@@ -47,8 +48,10 @@
 
 /* MEGA MENU STYLES */
 .dropdown-mega-menu {
-  position: fixed; /* fix relative to viewport or header absolute */
-  top: 70px; /* offset for topbar height */
+  position: fixed;
+  /* fix relative to viewport or header absolute */
+  top: 70px;
+  /* offset for topbar height */
   left: 50%;
   transform: translateX(-50%) translateY(10px);
   width: 90vw;
@@ -75,7 +78,7 @@
 .mega-menu-content {
   display: flex;
   padding: 30px;
-  min-height: 350px;
+  /* min-height: 350px; */
   gap: 20px;
 }
 
@@ -89,7 +92,8 @@
   padding-right: 20px;
 }
 
-.sidebar-list, .sidebar-sublist {
+.sidebar-list,
+.sidebar-sublist {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -110,7 +114,8 @@
   transition: color 0.2s;
 }
 
-.sidebar-item:hover, .sidebar-item.active {
+.sidebar-item:hover,
+.sidebar-item.active {
   color: #0F7B6C;
 }
 
@@ -156,12 +161,12 @@
 
 .mega-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .mega-card.bg-img {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://placehold.co/300x400') center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://placehold.co/300x400') center/cover;
 }
 
 .mega-card h5 {
@@ -171,7 +176,8 @@
   color: #1a202c;
 }
 
-.mega-card.bg-img h5, .mega-card.bg-img p {
+.mega-card.bg-img h5,
+.mega-card.bg-img p {
   color: #ffffff;
 }
 
@@ -249,12 +255,15 @@
     border: none;
     display: none;
   }
+
   .dropdown-mega-menu.show {
     display: flex;
   }
+
   .mega-menu-content {
     flex-direction: column;
   }
+
   .mega-menu-grid {
     grid-template-columns: 1fr;
     padding-left: 0;
