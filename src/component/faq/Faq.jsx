@@ -5,13 +5,13 @@ import faq from "../../assets/faq.svg";
 const FAQ = () => {
   const faqs = [
     {
-      question: "What is M2 Square?",
+      question: "What is M2?",
       answer:
-        "M2 Square is a digital real estate investment platform that allows you to own shares of high-yield properties without the need for large upfront capital or complex paperwork.",
+        "M2 is a digital real estate investment platform that allows you to own shares of high-yield properties without the need for large upfront capital or complex paperwork.",
     },
     {
       question: "How does it work?",
-      answer: "Investors purchase a share of a property through M2 Square. The platform handles property acquisition, tenant management, maintenance, and rental collection. Profits from rental income are then distributed to investors proportionally.",
+      answer: "Investors purchase a share of a property through M2. The platform handles property acquisition, tenant management, maintenance, and rental collection. Profits from rental income are then distributed to investors proportionally.",
     },
     {
       question: "What is the minimum investment amount?",
@@ -23,7 +23,7 @@ const FAQ = () => {
     },
     {
       question: "Is my investment secure?",
-      answer: "Your investment is backed by tangible real estate assets. M2 Square also ensures due diligence, legal documentation, and property insurance to enhance security.",
+      answer: "Your investment is backed by tangible real estate assets. M2 also ensures due diligence, legal documentation, and property insurance to enhance security.",
     },
     {
       question: "What documents are required?",

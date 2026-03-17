@@ -69,7 +69,7 @@ const TokenizedHomes = () => {
       }}>
         <div >
           <h1 style={{ fontSize: "56px", fontWeight: "800", lineHeight: "1.2", marginBottom: "16px" }}>
-            The M<sup>2</sup> Square <br /> <span style={{ color: "#8B5CF6" }}>Marketplace</span> Is now Live!
+            The M<sup>2</sup> <br /> <span style={{ color: "#8B5CF6" }}>Marketplace</span> Is now Live!
           </h1>
           <p style={{ fontSize: "18px", color: "#9CA3AF", maxWidth: "600px", margin: "0 auto 40px", lineHeight: "1.6" }}>
             Invest in Saudi Arabia's best rental properties, starting from just SAR 2,000 on your real estate investments this month.</p>
@@ -231,7 +231,7 @@ const TokenizedHomes = () => {
           {[
             {
               title: "Bridging real estate and the digital age",
-              desc: <>M<sup>2</sup> Square is revolutionizing real estate investment in the MENA region by seamlessly bridging traditional real estate with the digital age.</>
+              desc: <>M<sup>2</sup> is revolutionizing real estate investment in the MENA region by seamlessly bridging traditional real estate with the digital age.</>
             },
             {
               title: "Backed by Saudi’s Leading Authorities",
@@ -243,7 +243,7 @@ const TokenizedHomes = () => {
             },
             {
               title: "Save on Saudi Land Department (SALD) fees",
-              desc: <>With M<sup>2</sup> Square, investors pay only half the DLD fees —just 2% instead of the standard 4%—making real estate investments more affordable and accessible.</>
+              desc: <>With M<sup>2</sup>, investors pay only half the DLD fees —just 2% instead of the standard 4%—making real estate investments more affordable and accessible.</>
             }
           ].map((feature, i) => (
             <div key={i} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -341,12 +341,12 @@ const TokenizedHomes = () => {
               },
               {
                 title: "Mortgage",
-                desc: <>Receive returns from monthly rental income and capital appreciation, directly in your M<sup>2</sup> Square Mint Wallet.</>,
+                desc: <>Receive returns from monthly rental income and capital appreciation, directly in your M<sup>2</sup> Mint Wallet.</>,
                 image: "../src/assets/image4.svg?v=2"
               },
               {
                 title: "Mint",
-                desc: <>Easily sell your tokens on the M<sup>2</sup> Square Mint Marketplace, offering faster and flexible transactions.</>,
+                desc: <>Easily sell your tokens on the M<sup>2</sup> Mint Marketplace, offering faster and flexible transactions.</>,
                 image: "../src/assets/image5.svg?v=2"
               }
             ].map((step, index) => (
@@ -599,7 +599,7 @@ const TokenizedHomes = () => {
               { title: "Property funding", desc: "The property is listed on our platform and opened for investor funding." },
               { title: "Asset tokenization", desc: "The property is divided into digital tokens, allowing investors to own them directly through our platform." },
               { title: "Property management", desc: "We take care of everything, from tenant selection to maintenance, and everything in between." },
-              { title: "Dividend distribution", desc: <>Investors receive their share of monthly rental income directly in their M<sup>2</sup> Square Mint Wallet.</> },
+              { title: "Dividend distribution", desc: <>Investors receive their share of monthly rental income directly in their M<sup>2</sup> Mint Wallet.</> },
               { title: "Exit strategy", desc: "We seamlessly handle the sale when the property reaches its target value or investors vote to sell." }
             ].map((item, i) => (
               <div key={i} style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>

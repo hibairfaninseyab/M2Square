@@ -619,7 +619,7 @@ const Hero = () => {
           <h1 className="fw-bold" style={{ fontSize: "2.5rem", lineHeight: 1.2 }}>
             Here’s why{" "}
             <span className="text-success">50,000+</span>{" "}
-            others chose M2 Square
+            others chose M2
           </h1>
         </div>
 

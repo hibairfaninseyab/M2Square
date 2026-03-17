@@ -45,7 +45,7 @@ const cardsData = [
   {
     title: "Regulated and Secure",
     description:
-      "All investments on M2 Square operate under the Saudi Central Bank (SAMA) framework. This ensures that client funds are segregated and protected and that every property investment is held in a special purpose vehicle (SPV) -- to safeguard ownership and reduce risk.",
+      "All investments on M2 operate under the Saudi Central Bank (SAMA) framework. This ensures that client funds are segregated and protected and that every property investment is held in a special purpose vehicle (SPV) -- to safeguard ownership and reduce risk.",
     img: img1,
   },
   {
@@ -224,7 +224,7 @@ const logos = [
           7,600+ homeowners
         </span>
         <span style={{ color: "var(--Primary-Text, #111827)", fontSize: 40, fontFamily: "Montserrat", fontWeight: 600 }}>
-          {" "}chose M2 Square Mortgage
+          {" "}chose M2 Mortgage
         </span>
       </div>
 
@@ -477,7 +477,7 @@ Get pre-approved in minutes with the best rates in the market.
                 fontSize: "24px",
               }}
             >
-              Explore hassle-free home loan solutions with M2 Square Mortgage.
+              Explore hassle-free home loan solutions with M2 Mortgage.
             </p>
 
            <div className="mt-3">

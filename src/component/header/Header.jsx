@@ -27,28 +27,28 @@ const Header = () => {
   const cardItems = [
     {
       title: "Home Financing",
-      subtitle: "M2 Square Mortgage",
+      subtitle: "M2 Mortgage",
       bgClass: "",
       arrowBg: "#28C76F",
       link: "/finance"
     },
     {
       title: "Fractional Ownership",
-      subtitle: "M2 Square Blocks",
+      subtitle: "M2 Blocks",
       bgClass: "",
       arrowBg: "#00CFE8",
       link: "/home"
     },
     {
       title: "Tokenized Investments",
-      subtitle: "M2 Square Mint",
+      subtitle: "M2 Mint",
       bgClass: "",
       arrowBg: "#7367F0",
       link: "/tokenized-homes"
     },
     {
       title: "Buy, sell, rent manage",
-      subtitle: "M2 Square",
+      subtitle: "M2",
       bgClass: "",
       arrowBg: "#10162A",
       link: "/buy-sell"
